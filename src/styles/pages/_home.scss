@@ -1,0 +1,141 @@
+
+.greeting_turning, .greeting_into{
+    height: 2.5rem;
+    display: inline-block;
+    vertical-align: text-top;
+    overflow-y: hidden;
+    position: relative;
+    bottom: -13px;
+
+    span{
+    position: relative;
+    animation: greeting 16000ms linear infinite;
+
+    }
+}
+@keyframes greeting {
+    0% {top: 30px; }
+    100% {top: -255px; }
+}
+
+.wave-wrapper{
+    width: 100%;
+    height: 8rem;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 2;
+    transition: height 500ms ease-in-out;
+}
+
+.wave1{
+    position: relative;
+    top: 0;
+    width: 100%;
+    background: url(../../images/wave1.png) ;
+    background-position: 0% 0%;
+    background-repeat: repeat-x;
+    background-size: 1000px;
+    height: 100%;
+    animation: wave1 60s linear infinite alternate;
+}
+.wave2{
+    position: relative;
+    top: -100px;
+    width: 100%;
+    background: url(../../images/wave2.png) ;
+    background-position: 0% -5%;
+    background-repeat: repeat-x;
+    background-size: 1000px;
+    height: 100%;
+    animation: wave2 60s linear infinite alternate;
+    transition: top 500ms ease-in-out;
+}
+//open waves
+.wave-wrapper--open{
+    height: 30rem;
+    transition: height 500ms ease-in-out;
+}
+.wave2--open{
+    top: -470px;
+    transition: top 500ms ease-in-out;
+}
+
+@keyframes wave1 {
+    0% {background-position: 0% -5%;}
+    100% {background-position: 3000px -5%;}
+}
+@keyframes wave2 {
+    0% { background-position: 2000px -5%; }
+    100% { background-position: 0px -5%; }
+}
+.reviewsWrapper{
+    width: 100%;
+    position: absolute;
+    top: 10rem;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+.reviews-card{
+    width: 20rem;
+    height: 12rem;
+    background-color: white;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: repeat(6, 1fr);
+    font-family: $main-font;
+    margin: auto;
+    flex-shrink: 0;
+    margin: 0 1rem;
+}
+
+.image-wrapper{
+    grid-column: 1/2;
+    grid-row: 1/4;
+    margin: 1rem 0 0 25%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(105deg,  $accent-color, $contact-button);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.reviews-card_image{
+    width: 4.2rem;
+    height: 4.2rem;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+.reviews-card_review-by{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    color: $widget-color;
+    margin-top: 1rem ;
+}
+.reviews-card_name{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    color: $font-color;
+}
+.reviews-card_stars{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+.reviews-card_parragraph{
+    grid-column: 1/3;
+    grid-row: 4/7;
+    height: 4rem;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

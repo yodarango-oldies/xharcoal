@@ -1,0 +1,38 @@
+#root{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.main-wrapper{
+    height: 100vh;
+    padding-top: 1vh;
+}
+.half-vw{
+    width: 100vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3vh auto 5vh;
+}
+.half-vw-left{
+    width: 500px;
+    padding: 0 1rem;
+}
+
+.left-greeting{
+text-align: center;
+}
+
+.half-vw-right{
+    width: 500px;
+    padding: 0 1rem;
+
+    img{
+        width: 100%;
+        margin-top: 2rem;
+        max-height: 200px;
+        object-fit: cover;
+        object-position: center;
+    }
+}

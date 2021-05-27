@@ -1,0 +1,158 @@
+.contactButton, .contactButton--open, .infoButton, .infoButton--open{
+    position: relative;
+    top: 0;
+    background-color: $contact-button;
+    width: 8em;
+    max-width: 500px;
+    padding: .2em 0;
+    display: block;
+    font: 800 2rem Roboto;
+    border: none;
+    border-radius: 12px;
+    margin: 1rem auto 1.5rem;
+    color: $background-color;
+    transition: top 500ms ease-in-out;
+
+    &:hover{
+        cursor: pointer;
+        transform: scale(.98);
+        background-color: white;
+        transition: 300ms ease-in-out;
+    }
+}
+
+.contactButton--open, .infoButton--open{
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 80vw;
+    height: 3rem;
+    border-radius: 10px 10px 0 0;
+    transition: top 500ms ease-in-out;
+    z-index: 4 ;
+    pointer-events: none;
+}
+
+.contactButton-about--open{
+    position: fixed;
+    top: -43rem;   
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80vw;
+    height: 3rem;
+    border-radius: 10px 10px 0 0;
+    transition: top 500ms ease-in-out;
+    z-index: 4 ;
+    pointer-events: none;
+}
+
+.menu-trigger{
+    height: 5rem;
+    position: relative;
+    right: 3rem;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+}
+
+@keyframes firstArrow {
+    0% {left: 0; }
+    100% { left: 5px;}
+    
+}
+@keyframes secondArrow {
+    0% {left: 20; }
+    100% { left: 25px;}
+    
+}
+@keyframes thirdArrow {
+    0% {left: 40; }
+    100% { left: 45px;}
+    
+}
+.first-arrow{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-left: 4px solid $widget-color;
+    border-bottom: 4px solid $widget-color;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    animation: firstArrow 1000ms ease-in-out infinite alternate;
+}
+.second-arrow{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-left: 4px solid $widget-color;
+    border-bottom: 4px solid $widget-color;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 20px;
+    top: .45rem;
+    animation: secondArrow 1000ms ease-in-out 100ms infinite alternate;
+}
+.third-arrow{
+    height: .5rem;
+    width: .5rem;
+    border-left: 4px solid $widget-color;
+    border-bottom: 4px solid $widget-color;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 40px;
+    top: .95rem;
+    animation: thirdArrow 1000ms ease-in-out 200ms infinite alternate;
+}
+
+.open-wave-arrow, .open-wave-arrow--open{
+    position: relative;
+    top: 1rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    z-index: 3;
+
+    &:hover{
+        transform: translateY(5px);
+        transition: transform 300ms ease-in-out;
+        cursor: pointer;
+    }
+
+    img{
+        height: 100%;
+        margin: 0;
+        stroke: $widget-color;
+        stroke-width: .8rem;
+        fill: rgba(0, 0, 0, 0);
+    }
+}
+
+.open-wave-arrow--open{
+    top: -22rem;
+    z-index: 3;
+    transition: all 500ms ease-in-out;
+
+    img{
+        transform: rotate(180deg);
+    }
+}
+
+.infoButton{
+    color: white;
+    background-color: $secondary-color;
+    text-align: center;
+
+    &:hover{
+        color: #242424;
+    }
+}
+.infoButton--open{
+    display: none;
+}

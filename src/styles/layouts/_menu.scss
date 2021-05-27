@@ -1,0 +1,88 @@
+.close-menu{
+position: absolute;
+margin: 1rem;
+right: 0;
+background-color: $accent-color;
+border-radius: 50%;
+color: white;
+font: 600 1.2rem $main-font;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 2.5rem;
+width: 2.5rem;
+transition: background-color 300ms ease-in-out;
+
+&:hover{
+    background-color: $widget-color;
+    color: #242424;
+    cursor: pointer;
+}
+}
+
+.menu-item{
+    position: absolute;
+    display: block;
+    background-color: $secondary-color;
+    color: white;
+    font: 400 1rem $main-font;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 300ms ease-in-out;
+    text-decoration: none;
+
+
+    &:hover{
+        background-color: $widget-color;
+        color: #242424;
+        cursor: pointer;
+
+    }
+}
+.menu-item-first{
+    margin: 3rem 5rem 0 0;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    animation: menuOpenOne 500ms ease-in-out;
+}
+.menu-item-second{
+    margin: 8rem 9rem 0 0;
+    right: 0;
+    width: 5rem;
+    height: 5rem;
+    animation: menuOpenTwo 500ms ease-in-out;
+}
+.menu-item-third{
+    margin: 15rem 9rem 0 0;
+    right: 0;
+    width: 6rem;
+    height: 6rem;
+    animation: menuOpenThree 500ms ease-in-out;
+}
+.menu-item-fourth{
+    margin: 22rem 4rem 0 0;
+    right: 0;
+    width: 7rem;
+    height: 7rem;
+    animation: menuOpenFour 500ms ease-in-out;
+}
+
+@keyframes menuOpenOne {
+    0% { margin: -2rem -2rem 0 0; }
+    100% { margin: 3rem 5rem 0 0; }
+}
+@keyframes menuOpenTwo {
+    0% { margin: -2rem -2rem 0 0; }
+    100% { margin: 8rem 9rem 0 0; }
+}
+@keyframes menuOpenThree {
+    0% {  margin: -2rem -2rem 0 0; }
+    100% { margin: 15rem 9rem 0 0; }
+}
+@keyframes menuOpenFour {
+    0% { margin: -2rem -2rem 0 0; }
+    100% { margin: 22rem 4rem 0 0; }
+}

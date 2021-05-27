@@ -1,0 +1,70 @@
+.std-form{
+    width: 80vw;
+    max-width: 600px;
+    height: 650px;
+    background-color: rgba(255, 255, 255, 0.5);
+    filter: blur(.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 6rem auto 0;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2.5rem 0;
+    border-radius: 12px ;
+    animation: growForm 500ms ease-in-out;
+
+    button{
+        position: absolute;
+        background-color: $contact-button;
+        width: inherit;
+        max-width: inherit;
+        border-radius: 0 0 10px 10px;
+        border: none;
+        height: 3rem;
+        z-index: 5;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font: 600 1.7rem $main-font;
+        color: $background-color;
+    }
+
+    input, textarea, select {
+        background-color: $widget-color;
+        z-index: 4;
+        border: none;
+        width: 90%;
+        height: 2.5rem;
+        font: 300 1rem $main-font;
+        border-radius: 10px;
+        padding: .5rem;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    textarea{
+        height: 30%;
+        resize: none;
+    }
+}
+
+@keyframes growForm {
+    0% {height: 400px; margin-top: 10rem;}
+    100% {height: 650px; margin-top: 6rem;}
+}
+
+.buy-from {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0;
+    margin: 2rem auto;
+    position: relative;
+}
