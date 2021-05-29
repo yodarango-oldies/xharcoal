@@ -12,7 +12,7 @@ router.post('/reviews', async (req, res)=>{
         const newReview = new Review({...req.body});
         const x = await newReview.save();
 
-        res.send(x);
+        res.redirect('/');
 
     } catch (error) {
         console.log(erro)

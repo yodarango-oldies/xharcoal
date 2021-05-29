@@ -55,6 +55,20 @@
 .wave-wrapper--open{
     height: 30rem;
     transition: height 500ms ease-in-out;
+
+    .infoButton{
+        display: block;
+        position: absolute;
+        top: 23rem;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 3.5rem;
+    }
+
+    .infoButton-leave-rvw--open{
+    display: none;
+    }
 }
 .wave2--open{
     top: -470px;
@@ -126,7 +140,46 @@
 .reviews-card_stars{
     grid-column: 2/3;
     grid-row: 3/4;
+    background-position: left;
+    background-repeat: no-repeat;
 }
+.oneStars{
+    background-size: 30px;
+    background-image: url(../../images/stars-1-stars.svg);
+}
+.oneHalfStars{
+    background-size: 50px;
+    background-image: url(../../images/stars-1.5-stars.svg);
+}
+.twoStars{
+    background-size: 60px;
+    background-image: url(../../images/stars-2-stars.svg);
+}
+.twoHalfStars{
+    background-size: 80px;
+    background-image: url(../../images/stars-2.5-stars.svg);
+}
+.threeStars{
+    background-size: 90px;
+    background-image: url(../../images/stars-3-stars.svg);
+}
+.threeHalfStars{
+    background-size: 100px;
+    background-image: url(../../images/stars-3.5-stars.svg);
+}
+.fourStars{
+    background-size: 115px;
+    background-image: url(../../images/stars-4-stars.svg);
+}
+.fourHalfStars{
+    background-size: 130px;
+    background-image: url(../../images/stars-4.5-stars.svg);
+}
+.fiveStars{
+    background-size: 145px;
+    background-image: url(../../images/stars-5-stars.svg);
+}
+
 .reviews-card_parragraph{
     grid-column: 1/3;
     grid-row: 4/7;
@@ -138,4 +191,48 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+////============= open Leave a review form ================//
+.std-form-review{
+    z-index: 9;
+
+    button{ 
+        background-color: $secondary-color;
+        color: white;
+    }
+}
+
+.starsWrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    width: 90%;
+    height: 10rem;
+    overflow-y: scroll;
+    background-color: rgba($color: $widget-color, $alpha: 1);
+    padding: 1rem;
+    border-radius: 12px;
+
+    label{
+        display: block;
+        width: 100%;
+    }
+    input{
+        width: 10px;
+        display: none;
+    }
+    div{
+        width: 90%;
+        height: 3rem;
+        background-position: left;
+        background-repeat: no-repeat;
+        display: inline-block;
+        filter: grayscale(1);
+    }
+    input:checked + div{
+        filter: grayscale(0);
+    }
 }

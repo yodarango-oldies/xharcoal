@@ -1,5 +1,5 @@
 import '../../Main.scss';
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import Greeting from "../layouts/Greeting";
 import ThreeDVector from '../layouts/ThreeDVector';
 import HalfScreen from '../layouts/HalfScreen';

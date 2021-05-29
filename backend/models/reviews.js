@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const reviewSchema = new mongoose.Schema({
     name: String,
     avatar: String,
-    stars: Number,
+    stars: String,
     comment: String
 });
 

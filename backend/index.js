@@ -1,4 +1,4 @@
-require('dotenv').config()
+//require('dotenv').config()
 const express = require('express');
 const app = express();
 
@@ -9,5 +9,10 @@ const reviewsRouter = require('./routes/reviews');
 require('./db/db')
 
 app.use('', reviewsRouter);
+
+
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('frontend/build'))
+}
 
 app.listen(`${process.env.PORT}`)
