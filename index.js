@@ -15,4 +15,8 @@ if(process.env.NODE_ENV === 'production'){
     app.use(express.static('frontend/build'));
 }
 
+app.get('/*', function(req,res) {
+    res.sendFile(`${__dirname}/frontend/build/index.html`);
+});
+
 app.listen(`${process.env.PORT}`)
