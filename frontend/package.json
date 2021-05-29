@@ -2,7 +2,7 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001",
+  "proxy": "https://xharcoal.herokuapp.com",
   "dependencies": {
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
