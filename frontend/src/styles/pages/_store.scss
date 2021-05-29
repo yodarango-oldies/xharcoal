@@ -1,0 +1,380 @@
+///===========card on carrousel==========
+
+.web-card--store{
+    &:hover{
+        cursor: default;
+    }
+    
+    .desc-title_title{
+        margin: 0;
+    }
+
+    .desc-title_desc{
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    .buy-btn{
+        font: 800 1rem $main-font;
+        color: #242424;
+        padding: .3rem 0;
+        width: 4.5rem;
+        text-align: center;
+        border-radius: 6px;
+        background-color: white;
+        transition: background-color 300ms ease-in-out;
+        margin: 1.5rem 1rem  0 0;
+        display: inline-block;
+
+        &:hover{
+            background-color: #242424;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+
+.try-btn{
+        font: 800 1rem $main-font;
+        color: white;
+        padding: .3rem 0;
+        width: 4.5rem;
+        display: inline-block;
+        text-align: center;
+        border-radius: 6px;
+        background-color: $accent-color;
+        transition: background-color 300ms ease-in-out;
+        margin-top: 1.5rem;
+        text-decoration: none;
+
+        &:hover{
+            background-color: #242424;
+            color: white;
+            cursor: pointer;
+        }
+}
+
+
+////=============== More info popup ======================///
+.std-h2{
+    font: 800 2rem $main-font;
+    color: #242424;
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+}
+.std-p{
+    font: 400 1.2rem $main-font;
+    color: #242424;
+    width: 100%;
+    text-align: center;
+    margin:0 0 2rem;
+}
+.view-asset-store{
+    padding: 3rem 1rem;
+    overflow: scroll;
+}
+
+.store-steps-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap ;
+    width: 100%;
+    padding: 1.5rem 0;
+    background-color: rgba($color: $widget-color, $alpha: .8);
+    border-radius: 12px;
+}
+
+.store-steps{
+    width: 80%;
+    height: 10rem;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 1fr 1fr;
+    
+    span{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        font: 800 3rem $main-font;
+        color: $accent-color;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    p{
+        grid-column: 2/3; 
+        grid-row: 1/2;
+        font: 400 .8rem $main-font;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: $accent-color;
+    }
+    img{
+        grid-column: 1/3 ;
+        grid-row: 2/3;
+        width: 5rem;
+        display: block;
+        margin: auto;
+    }
+
+}
+
+.std-p--buy{
+    padding: .5rem 1rem;
+    background-color: $secondary-color;
+    color: white;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+.confirm-order-btn{
+    background-color: $accent-color;
+}
+
+.buy-from{
+    overflow-y: scroll;
+
+    input{
+        margin: .5rem auto;
+    }
+
+}
+
+.view-asset-questions{
+    height: 40rem;
+    margin-top: calc((100vh - 40rem) / 2) ;
+}
+
+////////============Satrts Vanilla Cupcake=============////
+.website-info-page{
+    .infoButton{
+        text-decoration: none;
+    }
+    .std-p--price{
+        margin: 2rem auto 0;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .std-p{
+        margin: 2rem 0;
+        color: $widget-color;
+    }
+    .std-p--no-margin{
+        margin: 0 auto ;
+    }
+}
+
+.website-info-page_blog-desc{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.blog-desc_image{
+    width: 100%;
+    background: url('../../images/hour-glass.jpg');
+    height: 15rem;
+    background-position: center;
+    background-size: cover;
+    margin: 2rem 0;
+}
+.blog-desc_desc{
+    width: 100%;
+}
+
+.desc_step{
+    width: 14rem;
+    margin: 1rem auto;
+    text-align: left;
+    color: $widget-color;
+    font: 400 1.2rem $main-font;
+
+    span{
+        font: 800 2rem $main-font;
+        vertical-align: middle;
+        color: $contact-button;
+    }
+}
+
+.desc_technologies-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10rem;
+    border-radius: 12px;
+    background-color:rgba($color: $widget-color, $alpha: .5);
+    box-sizing: border-box;
+
+    div, div:nth-child(1){
+        background-position: center;
+        background-size: 80%;
+        background-repeat: no-repeat;
+        height: 5rem;
+        width: 5rem;
+        margin: 1rem .5rem;
+        border-radius: 50%;
+        background-image: url('../../images/sendgrid.png');
+        background-color: white ;
+        padding: .5rem;
+        box-sizing: border-box;
+    }
+    div:nth-child(2){
+        background-size: 70%;
+        background-image: url('../../images/heroku.png');
+    }
+    div:nth-child(3){
+        background-size: 70%;
+        background-image: url('../../images/mongodb.png');
+    }
+}
+
+.broken-down-features-grid{
+    display: grid;
+    grid-template-areas: 
+    'icon1 steps1 steps1'
+    'image1 image1 image1'
+    'icon2 steps2 steps2'
+    'image2 image2 image2'
+    'icon3 steps3 steps3'
+    'image3 image3 image3'
+    'icon4 steps4 steps4'
+    'image4 image4 image4';
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, minmax(7rem, auto));
+    margin: 3rem auto 0;
+    width: 100%;
+
+    @media (min-width: 700px) {
+    display: grid;
+    grid-template-areas: 
+    'icon1 steps1 steps1 image1 image1 image1'
+    'icon2 steps2 steps2 image2 image2 image2'
+    'icon3 steps3 steps3 image3 image3 image3'
+    'icon4 steps4 steps4 image4 image4 image4';
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(7, minmax(7rem, auto));
+    margin: 2rem auto;
+    width: 100%;
+}
+    div{
+        color: $widget-color;
+        font: 400 1.2rem $main-font;
+
+        h3{
+            color: $secondary-color;
+        }
+    }
+        .grid-icon{
+            background-size: 65%;
+            background-repeat: no-repeat;
+            background-position: left ;
+        }
+
+        .grid-image{
+            width: 100%;
+            height: 15rem;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center ;
+            background-size: cover;
+            margin: 2rem 0 4rem;
+        }
+        div:nth-child(1){
+            background-image: url('../../images/vanilla-post.svg');
+            grid-area: icon1 ;
+        }
+        div:nth-child(2){
+            grid-area: steps1 ;
+        }
+        div:nth-child(3){
+            background-image: url('../../images/hour-glass.jpg');
+            grid-area: image1 ;
+        }
+        div:nth-child(4){
+            background-image: url('../../images/vanilla-embed.svg');
+            grid-area: icon2 ;
+        }
+        div:nth-child(5){
+            grid-area: steps2 ;
+        }
+        div:nth-child(6){
+            background-image: url('../../images/hour-glass.jpg');
+            grid-area: image2 ;
+        }
+        div:nth-child(7){
+            background-image: url('../../images/vanilla-feedback.svg');
+            grid-area: icon3 ;
+        }
+        div:nth-child(8){
+            grid-area: steps3 ;
+        }
+        div:nth-child(9){
+            background-image: url('../../images/hour-glass.jpg');
+            grid-area: image3 ;
+        }
+        div:nth-child(10){
+            background-image: url('../../images/vanilla-security.svg');
+            grid-area: icon4 ;
+        }
+        div:nth-child(11){
+            grid-area: steps4 ;
+        }
+        div:nth-child(12){
+            background-image: url('../../images/hour-glass.jpg');
+            grid-area: image4 ;
+        }   
+
+}
+
+/////==============Terms and Conditions pop up ===================////
+
+.terms-accepted-btn{
+    display: none;
+}
+
+#accept-terms{
+    width: 5px;
+    visibility: hidden;
+    position: absolute;
+}
+
+.switch{
+    width: 4rem;
+    height: 2rem;
+    background-color: #242424;
+    border-radius: 1.5rem;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+    margin: 1rem auto;
+
+    .switch_ball{
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background-color: #f2f2f2;
+        position: absolute;
+        left: .2rem;
+        top: .2rem;
+        transition: transform 300ms ease-in-out;
+        cursor: pointer;
+    }
+
+}
+
+#accept-terms:checked + .switch > div{
+    -webkit-transform: translateX(2rem);
+    -ms-transform: translateX(2rem);
+    transform: translateX(2rem);
+}
+
+#accept-terms:checked + .switch{
+    background: $accent-color;
+}
