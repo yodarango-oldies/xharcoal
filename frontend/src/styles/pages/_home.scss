@@ -125,6 +125,8 @@
     width: 4.2rem;
     height: 4.2rem;
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    background-size: cover;
+    background-position: center;
 }
 .reviews-card_review-by{
     grid-column: 2/3;
@@ -196,14 +198,26 @@
 ////============= open Leave a review form ================//
 .std-form-review{
     z-index: 9;
+    overflow-y: scroll;
+    padding: 2rem 0 0;
+    background-color: rgba($color: $widget-color, $alpha: .8);
+    animation: growFromMedium 500ms ease-in-out;
 
     button{ 
         background-color: $secondary-color;
         color: white;
+        position: relative;
+    }
+    input[type=text], textarea{
+        margin: 1.5rem auto
+    }
+    .std-p{
+        color: $accent-color;
+        margin: 1.5rem auto 0;
     }
 }
 
-.starsWrapper{
+.starsWrapper, .avatarWrapper{
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -211,10 +225,11 @@
     flex-wrap: nowrap;
     width: 90%;
     height: 10rem;
-    overflow-y: scroll;
+    overflow: scroll;
     background-color: rgba($color: $widget-color, $alpha: 1);
     padding: 1rem;
     border-radius: 12px;
+    margin: 1.5rem 0;
 
     label{
         display: block;
@@ -235,4 +250,87 @@
     input:checked + div{
         filter: grayscale(0);
     }
+}
+
+.avatarWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row;
+    flex-wrap: nowrap;
+
+    div{
+        width: 5rem;
+        height: 5rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+        filter: grayscale(1);
+        clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    }
+
+    label{
+        padding: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(105deg,  $accent-color, $contact-button);
+        clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+        margin:  0 .5rem;
+        display: block;
+        width: 6rem;
+        height: 6rem;
+    }
+}
+.avatarOne{
+    background-image: url('../../images/Avatar1.png');
+}
+.avatarTwo{
+    background-image: url('../../images/Avatar11.png');
+}
+.avatarThree{
+    background-image: url('../../images/Avatar3.png');
+}
+.avatarFour{
+    background-image: url('../../images/Avatar4.png');
+}
+.avatarFive{
+    background-image: url('../../images/Avatar5.png');
+}
+.avatarSix{
+    background-image: url('../../images/Avatar6.png');
+}
+.avatarSeven{
+    background-image: url('../../images/Avatar7.png');
+}
+.avatarEight{
+    background-image: url('../../images/Avatar8.png');
+}
+.avatarNine{
+    background-image: url('../../images/Avatar9.png');
+}
+.avatarTen{
+    background-image: url('../../images/Avatar10.png');
+}
+
+.std-form-unlock-review{
+    height: 300px;
+    margin: 10rem auto;
+    animation: growFormSmall 500ms ease-in-out;
+
+    .infoButton{
+        position: relative;
+        top: 0;
+    }
+}
+
+@keyframes growFormSmall {
+    0% {height: 600px; margin-top: 6rem;}
+    100% {height: 300px; margin-top: 10rem;}
+}
+
+@keyframes growFromMedium {
+    0% {height: 300px; margin-top: 6rem;}
+    100% {height: 600px; margin-top: 4rem;}
 }

@@ -20,7 +20,7 @@ useEffect(() => {
         {reviewData.map(review => (
             <div className = "reviews-card" key= {review.id}>
             <div className = "image-wrapper">
-            <img className = "reviews-card_image" src= {image} alt="avatar"/>
+            <div className = {`reviews-card_image ${review.avatar}`}></div>
             </div>
             <p className = "reviews-card_review-by">Review By</p>
             <p className = "reviews-card_name">{review.name}</p>

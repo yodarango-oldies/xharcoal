@@ -12,6 +12,7 @@
     margin: 1rem auto 1.5rem;
     color: $background-color;
     transition: top 500ms ease-in-out;
+    overflow-y: scroll;
 
     &:hover{
         cursor: pointer;
@@ -23,7 +24,7 @@
 
 .contactButton--open, .infoButton--open{
     position: fixed;
-    top: 4rem;
+    top: 2.5rem;
     left: 0;
     right: 0;
     bottom: 0;
@@ -31,7 +32,7 @@
     height: 3rem;
     border-radius: 10px 10px 0 0;
     transition: top 500ms ease-in-out;
-    z-index: 4 ;
+    z-index: 8 ;
     pointer-events: none;
 }
 

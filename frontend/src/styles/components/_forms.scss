@@ -1,7 +1,7 @@
 .std-form{
     width: 80vw;
     max-width: 600px;
-    height: 650px;
+    height: 600px;
     background-color: rgba(255, 255, 255, 0.5);
     filter: blur(.5);
     position: fixed;
@@ -9,8 +9,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    margin: 6rem auto 0;
-    z-index: 4;
+    margin: 4rem auto 0;
+    z-index: 8;
     display: flex;
     align-items: center;
     justify-content: space-around;

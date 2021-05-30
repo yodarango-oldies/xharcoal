@@ -75,6 +75,7 @@
 .view-asset-store{
     padding: 3rem 1rem;
     overflow: scroll;
+    z-index: 8;
 }
 
 .store-steps-wrapper{
@@ -135,6 +136,7 @@
 }
 
 .buy-from{
+    height: 500px;
     overflow-y: scroll;
 
     input{
@@ -143,10 +145,9 @@
 
 }
 
-.view-asset-questions{
-    height: 40rem;
-    margin-top: calc((100vh - 40rem) / 2) ;
-}
+// .view-asset-questions{
+//     margin-top: calc((100vh - 40rem) / 2) ;
+// }
 
 ////////============Satrts Vanilla Cupcake=============////
 .website-info-page{
