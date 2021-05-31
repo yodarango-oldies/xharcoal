@@ -26,6 +26,14 @@
     overflow: hidden;
     z-index: 2;
     transition: height 500ms ease-in-out;
+
+    @media (min-width: 700px) {
+        height: 11rem;
+        bottom: -3rem;
+    }
+    @media (max-height: 650px) {
+       display: none;
+    }
 }
 
 .wave1{
@@ -38,6 +46,10 @@
     background-size: 1000px;
     height: 100%;
     animation: wave1 60s linear infinite alternate;
+
+    @media (min-width: 700px) {
+        top: 3rem;
+    }
 }
 .wave2{
     position: relative;
@@ -56,6 +68,9 @@
     height: 30rem;
     transition: height 500ms ease-in-out;
 
+     @media (min-width: 700px) {
+        height: 35rem;
+    }
     .infoButton{
         display: block;
         position: absolute;
@@ -64,6 +79,10 @@
         left: 0;
         right: 0;
         max-height: 3.5rem;
+
+        @media (min-width: 700px) {
+            top: 28rem;
+        }
     }
 
     .infoButton-leave-rvw--open{
@@ -73,6 +92,7 @@
 .wave2--open{
     top: -470px;
     transition: top 500ms ease-in-out;
+
 }
 
 @keyframes wave1 {
@@ -93,6 +113,10 @@
     justify-content: flex-start;
     flex-wrap: nowrap;
     overflow-x: scroll;
+
+    @media (min-width: 700px) {
+        top: 13rem;
+    }
 }
 .reviews-card{
     width: 20rem;
@@ -323,14 +347,18 @@
         position: relative;
         top: 0;
     }
+
+    p{
+        width: 100%;
+    }
 }
 
 @keyframes growFormSmall {
-    0% {height: 600px; margin-top: 6rem;}
+    0% {height: 700px; margin-top: 6rem;}
     100% {height: 300px; margin-top: 10rem;}
 }
 
 @keyframes growFromMedium {
     0% {height: 300px; margin-top: 6rem;}
-    100% {height: 600px; margin-top: 4rem;}
+    100% {height: 700px; margin-top: 4rem;}
 }

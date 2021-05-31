@@ -1,6 +1,25 @@
 ///===========card on carrousel==========
 
 .web-card--store{
+    height: 14rem;
+    align-items: flex-start;
+
+    @media (min-width: 700px) {
+        height: 18rem;;
+    }
+
+    .std-p--price{
+        margin: 0;
+
+        @media (min-width: 700px) {
+            margin: 1rem 0 0 0;
+        }
+    }
+
+    .web-card_img{
+        height: 100%;
+    }
+
     &:hover{
         cursor: default;
     }
@@ -56,6 +75,9 @@
         }
 }
 
+.left-greeting-store{
+    font: 400 4rem $title-font;
+}
 
 ////=============== More info popup ======================///
 .std-h2{
@@ -76,6 +98,18 @@
     padding: 3rem 1rem;
     overflow: scroll;
     z-index: 8;
+
+    @media (min-width: 700px) {
+        .close-X{
+            font: 400 2.5rem $main-font;
+        }
+    }
+
+    .std-p{
+        @media (min-width: 700px) {
+            font: 400 1.5rem $main-font;
+        }
+    }
 }
 
 .store-steps-wrapper{
@@ -123,13 +157,40 @@
     }
 
 }
+@media (min-width: 700px) {
 
+    .store-steps{
+        grid-template-columns: 15% 35% 50%;
+        grid-template-rows: 1fr;
+        
+        span{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            font: 800 4.5rem $main-font;
+        }
+        p{
+            grid-column: 2/3; 
+            grid-row: 1/2;
+            font: 400 1.1rem $main-font;
+        }
+
+        img{
+            grid-column: 3/4;
+            grid-row: 1/5;
+            width: 7rem;
+            display: block;
+            margin: auto;
+        }
+    
+    }
+}
 .std-p--buy{
     padding: .5rem 1rem;
     background-color: $secondary-color;
     color: white;
     border-radius: 12px;
     margin: 2rem 0;
+
 }
 .confirm-order-btn{
     background-color: $accent-color;
@@ -141,13 +202,44 @@
 
     input{
         margin: .5rem auto;
+        width: 100%;
     }
 
-}
+    textarea{
+        width: 100%;
+    }
 
-// .view-asset-questions{
-//     margin-top: calc((100vh - 40rem) / 2) ;
-// }
+    .std-p--price{
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (min-width: 700px) {
+    .buy-from{
+
+        input{
+            height: 3rem;
+            margin: 1rem auto;
+        }
+        label{
+            font: 400 1.5rem $main-font;
+        }
+
+        textarea{
+        height: 15rem;
+        }
+
+        .std-p--buy{
+            font: 400 1.5rem $main-font;
+            padding: 1rem 1.2rem;
+
+            i{
+                font-size: 1rem;
+            }
+        }
+
+    }
+}
 
 ////////============Satrts Vanilla Cupcake=============////
 .website-info-page{

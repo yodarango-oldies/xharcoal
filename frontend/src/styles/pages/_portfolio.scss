@@ -6,6 +6,10 @@
     left: 0;
     z-index: -1;
     font: 400 4rem $accent-font;
+
+    @media (min-width: 700px) {
+        font: 400 6rem $accent-font;
+    }
 }
 
 .main-wrapper_graphic{
@@ -44,6 +48,7 @@
 .main-wrapper{
     height: calc(100vh - 5rem);
 }
+
 .carrousel-display{
     width: 100%;
     height: 17rem;
@@ -54,7 +59,12 @@
     overflow: scroll;
     margin: 3rem auto;
     padding: 0 1rem;
+
+    @media (min-width: 700px) {
+        height: 25rem;
+    }
 }
+
 .carrousel-display_logo{
     width: 15rem;
     height: 15rem;
@@ -62,7 +72,13 @@
     object-fit: cover;
     object-position: center;
     margin: 0 1rem;
+
+    @media (min-width: 700px) {
+        height: 20rem;
+        width: 20rem;
+    }
 }
+
 .carrousel-display_logo--wrapper{
     width: 15rem;
     height: 15rem;
@@ -72,15 +88,26 @@
     align-items: center;
     justify-content: center;
     background-color: $widget-color;
+
     img{
         width: 15rem;
+    }
+
+    @media (min-width: 700px) {
+        height: 20rem;
+        width: 20rem;
+
+        img{
+            width: 20rem;
+        }
+    
     }
 }
 
 .carrousel-display_logo--wrapper, .carrousel-display_logo{
     transition: transform 500ms ease-in-out;
     &:hover{
-        transform: scale(1.1);
+        transform: scale(1);
         cursor: pointer;
     }
 }
@@ -93,6 +120,11 @@
     width: 100%;
     text-align: center;
     text-decoration: none;
+
+    @media (min-width: 700px) {
+        font: 400 2.5rem $main-font;
+    }
+
 }
 
 .open-wave-arrow-portfolio {
@@ -109,10 +141,10 @@
     width: 90vw;
     max-width: 800px;
     position: fixed;
-    height: 600px;
+    height: 700px;
     background-color: rgba($color: $widget-color, $alpha: .8);
     left: 5vw;
-    top: 5rem;
+    top: 4rem;
     z-index: 6;
     display: flex;
     align-items: center;
@@ -202,26 +234,40 @@
     background-color: $widget-color;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     border-radius: 12px;
     padding: .6rem;
     margin: 0 1rem;
+    flex-shrink: 0;
 
     &:hover{
         cursor: pointer;
     }
 }
 
+@media (min-width: 700px) {
+.web-card{
+    width: 28rem;
+    height: 18rem;
+}
+
+}
 .web-card_img{
     width: 7.5rem;
     height: 10rem;
     object-fit: cover;
     object-position: center;
     border-radius: 12px;
+
+    @media (min-width: 700px) {
+        height: 100%;
+        width: 11rem;
+        margin: 0;
+    }
 }
 
 .web-card_desc-title{
-    width: 11rem;
+    width: 90%;
     height: 10rem;
     margin: 0 0 0 1rem;
 }
@@ -230,6 +276,11 @@
     font: 600 1.2rem $main-font;
     color: #242424;
     margin: 0 0 1rem 0;
+    overflow-x: scroll;
+
+    @media (min-width: 700px) {
+        font: 600 1.8rem $main-font;
+    }
 }
 .desc-title_desc{
     font: 300 1rem $main-font;
@@ -241,6 +292,10 @@
     -webkit-box-orient: vertical;
     width: 100%;
     line-height: 1.8em;
+
+    @media (min-width: 700px) {
+        font: 300 1.3rem $main-font;
+    }
 }
 
 ////view webCart popup
@@ -250,15 +305,30 @@
     max-width: 1200px;
 }
 
+@media (min-width: 700px) {
+    .view-asset-website{
+       
+        p{
+            font: 400 1.5rem $main-font;
+        }
+        .view-asset_title{
+            font: 800 2rem $main-font; 
+        }
+    }
+}
 .view-asset_img-one{
     width: 80%;
-    max-width: 20rem;
+    max-width: 25rem;
     height: 15rem;
     object-position: center;
     object-fit: cover;
     display: block;
     margin: 4rem 0 2rem ;
     border-radius: 12px;
+
+    @media (min-width: 700px) {
+        height: 20rem;
+    }
 }
 
 .view-asset_img-two{
@@ -316,6 +386,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @media (min-width: 700px) {
+                padding: 0 1rem; 
+            }
         }
         span{
             grid-column: 2/3;
@@ -328,6 +402,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @media (min-width: 700px) {
+                font: 800 4rem $main-font;  
+            }
+
         }
         p{
             grid-column: 3/4;
@@ -341,6 +420,10 @@
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
+
+            @media (min-width: 700px) {
+                font: 400 1.2rem $main-font;  
+            }
         }
     }
 }

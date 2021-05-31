@@ -9,8 +9,9 @@ const StoreCarrousel = ({openDisclaimer}) => {
                 <div className="web-card_desc-title">
                     <h2 className="desc-title_title">Vanilla Blogger</h2>
                     <p className="desc-title_desc">
-                    The "Vanilla Blogger" website is now available! Fully customizable website, modern looking website
+                    The "Vanilla Cupcake Blogger" is now available!
                     </p>
+                    <p className = "std-p--price">Only $99.99</p>
                     <div className = 'buy-btn' onClick = {openDisclaimer} >Buy</div>
                     <a href="/store/vanilla-cupcake" className="try-btn">More</a> 
                 </div>

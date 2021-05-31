@@ -76,7 +76,7 @@ const Store = () => {
             {openFormAbt}
             {openQuestions}
             {disclaimer}
-            <div className = "left-greeting">READY. SET. WWW!</div>
+            <div className = "left-greeting left-greeting-store">READY. SET. WWW!</div>
             <StoreCarrousel openDisclaimer = {openDisclaimer} />
             <MainButton text = {buttonStyleAbt.text} nameOfClass = {buttonStyleAbt.newClass} cta = {openContactForm}/>
         </div>

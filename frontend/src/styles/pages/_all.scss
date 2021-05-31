@@ -4,6 +4,10 @@ body{
 .left-greeting{
     font: 400 2.8rem $title-font;
     color: $contrast;
+
+    @media (min-width: 700px) {
+        font: 400 3.5rem $title-font;
+    }
 }
 .dark-bkg{
     width: 100vw;
@@ -32,6 +36,12 @@ body{
     border-radius: 10px;
     font-style: italic;
     margin: 0 auto 2rem;
+    width: 100%;
+    text-align: center;
+
+    @media (min-width: 700px) {
+        font: 400 1.5rem $main-font;
+    }
 }
 
 .website-info-page{

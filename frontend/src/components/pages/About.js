@@ -27,7 +27,7 @@ const About = () => {
         setBackground(<div onClick = {closeForm} className = 'dark-bkg'></div>)
         setButtonStyle({
             newClass: ' contactButton contactButton-about--open',
-            text: 'Close'})
+            text: 'Contact'})
     }
 
     return (
