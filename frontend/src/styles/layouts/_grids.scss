@@ -40,3 +40,11 @@ text-align: center;
         }
     }
 }
+
+@media (min-width: 1000px) {
+
+    .half-vw-right{
+        width: 50%;
+        max-width: 650px;
+    }
+}

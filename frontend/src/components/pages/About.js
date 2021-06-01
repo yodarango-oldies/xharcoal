@@ -9,7 +9,7 @@ const About = () => {
     const [openForm, setOpenForm] = useState(null);
     const [background, setBackground] = useState(false)
     const [buttonStyleAbt, setButtonStyle] = useState({
-        newClass: 'contactButton',
+        newClass: 'contactButton contactButton-about',
         text: 'Contact'
     })
 
@@ -17,7 +17,7 @@ const About = () => {
         setOpenForm(null)
         setBackground(false)
         setButtonStyle({
-            newClass: 'contactButton',
+            newClass: 'contactButton contactButton-about',
             text: 'Contact'})
     }
 
@@ -31,7 +31,7 @@ const About = () => {
     }
 
     return (
-        <div className = "main-wrapper">
+        <div className = "main-wrapper main-wrapper-about">
         {background}
         {openForm}
         <HalfScreen 

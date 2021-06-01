@@ -22,6 +22,21 @@
     }
 }
 
+.contactButton {
+    @media (min-width: 1000px) {
+        margin: 0 0 0 5vw;
+        top: -5rem;
+    }
+
+    @media (min-width: 1200px) {
+        margin: 0 0 0 15vw;
+    }
+
+    @media (min-width: 1550px) {
+        margin: 0 0 0 15vw;
+    }
+}
+
 .contactButton--open, .infoButton--open{
     position: fixed;
     top: 2.5rem;
@@ -57,6 +72,10 @@
 
     @media (min-width: 700px) {
         top: -35rem;
+    }
+
+    @media (min-width: 1000px) {
+        top: -27rem;
     }
 
 }
@@ -148,11 +167,19 @@
     @media (max-height: 690px) and (max-width: 700px) {
         top: -25vh;
     }
+
     @media (max-height: 650px) {
         display: none;
     }
+
     @media (min-width: 700px) and (max-height: 750px) {
         top: -25vh;
+    }
+
+    @media (min-width: 1000px) and (max-height: 750px) {
+        top: -5rem;
+        left: 60vw;
+        width: 15rem;
     }
 }
 .open-wave-arrow--open{
@@ -164,10 +191,16 @@
         transform: rotate(180deg);
     }
     @media (min-width: 700px) {
-        top: -37rem;
+        top: -32rem;
     }
     @media (max-height: 690px) and (max-width: 700px) {
         top: -65vh;
+    }
+    // @media (min-width: 1000px) and (max-height: 749) {
+    //     top: -5rem;
+    // }
+    @media (min-width: 1000px) and (min-height: 750px){
+        top: -15rem;
     }
 }
 
@@ -182,4 +215,17 @@
 }
 .infoButton--open{
     display: none;
+}
+
+@media (min-width: 1000px) {
+
+    .contactButton-about{
+        margin: -20rem 0 0 10vw;
+    }
+}
+@media (min-width: 1300px) {
+
+    .contactButton-about{
+        margin: -20rem 0 0 15vw;
+    }
 }

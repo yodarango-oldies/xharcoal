@@ -7,10 +7,18 @@
     position: relative;
     bottom: -13px;
 
+    @media (min-width: 1000px) {
+        width: 14.3rem;
+    }
+
     span{
     position: relative;
     animation: greeting 16000ms linear infinite;
-
+    
+    @media (min-width: 1000px) {
+        display: inline-block;
+        width: 100%;
+    }
     }
 }
 @keyframes greeting {
@@ -130,6 +138,11 @@
     margin: auto;
     flex-shrink: 0;
     margin: 0 1rem;
+
+    @media (min-width: 1000px) {
+        width: 26rem;
+        height: 14rem;
+    }
 }
 
 .image-wrapper{
@@ -143,6 +156,7 @@
     justify-content: center;
     background: linear-gradient(105deg,  $accent-color, $contact-button);
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+
 }
 
 .reviews-card_image{
@@ -151,6 +165,7 @@
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
     background-size: cover;
     background-position: center;
+
 }
 .reviews-card_review-by{
     grid-column: 2/3;
@@ -217,6 +232,11 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+
+    @media (min-width: 1000px) {
+        margin: 1rem;
+        width: 23rem;
+    }
 }
 
 ////============= open Leave a review form ================//
@@ -232,7 +252,7 @@
         color: white;
         position: relative;
     }
-    input[type=text], textarea{
+    input[type=text], input[type=email], textarea{
         margin: 1.5rem auto
     }
     .std-p{
@@ -340,8 +360,11 @@
 
 .std-form-unlock-review{
     height: 300px;
+    max-width: 500px;
     margin: 10rem auto;
     animation: growFormSmall 500ms ease-in-out;
+    flex-direction: column;
+    flex-wrap: nowrap;
 
     .infoButton{
         position: relative;
@@ -350,6 +373,11 @@
 
     p{
         width: 100%;
+    }
+
+    input{
+        margin-top: 3.5rem ;
+        width: 90%;
     }
 }
 

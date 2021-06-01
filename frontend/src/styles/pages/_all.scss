@@ -8,6 +8,19 @@ body{
     @media (min-width: 700px) {
         font: 400 3.5rem $title-font;
     }
+    @media (min-width: 1000px) {
+        font: 400 5rem $title-font;
+    }
+}
+
+.left-greeting-home{
+
+    @media (min-width: 1000px) {
+        margin: 7rem 0 0 0;
+        font: 400 4rem $title-font;
+        text-align: left;
+        max-width: 650px;
+    }
 }
 .dark-bkg{
     width: 100vw;
