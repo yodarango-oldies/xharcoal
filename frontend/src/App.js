@@ -6,6 +6,7 @@ import Header from './components/header-footer/Header';
 import GraphicDesign from './components/pages/GraphicDesign';
 import WebDesign from './components/pages/WebDesign';
 import Store from './components/pages/Store';
+import Checkout from './components/pages/Checkout';
 import VanillaCupCake from './components/Website Information/VanillaCupCake';
 
 export const App = () => {
@@ -29,8 +30,11 @@ export const App = () => {
                 <Store />
             </Route>
             <Route exact path = "/store/vanilla-cupcake">
-            <VanillaCupCake />
-        </Route>
+                <VanillaCupCake />
+            </Route>
+            <Route exact path = "/store/checkout">
+                <Checkout />
+            </Route>
             <Route exact path = "/">
                 <Index />
             </Route>

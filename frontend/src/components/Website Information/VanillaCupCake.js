@@ -1,8 +1,56 @@
+import BuyWebsiteForm from '../layouts/BuyWebsiteForm';
+import  QuestionsForm from '../layouts/QuestionsForm';
+import DisclaimerForm from '../layouts/DisclaimerForm'
+import React, {useState} from 'react'
+
+
+
 const VanillaCupCake = () => {
+
+
+
+        ///////============ open disclaimer pop up ===============
+        const [disclaimer, setDisclaimer] = useState(null);
+
+        const openDisclaimer = ()=>{
+            setDisclaimer(<DisclaimerForm closeDisclaimer = {closeDisclaimer} openBuyForm = {openBuyForm}/>)
+        }
+    
+        const closeDisclaimer = ()=>{
+            setDisclaimer(null)
+        }
+        ///////============= open buy pop up ============
+    
+        const [buyForm, setBuyForm] = useState(null);
+    
+        const openBuyForm = ()=>{
+            setDisclaimer(null)
+            setBuyForm(<BuyWebsiteForm closeBuyForm = {closeBuyForm} openQuestionsForm = {openQuestionsForm}/>)
+        }
+    
+        const closeBuyForm = ()=> {
+            setBuyForm(null)
+        }
+
+         /////============= open questions popup ===========
+
+        const [openQuestions, setOpenQuestions] = useState(null);
+
+        const closeQuestionsForm = ()=> {
+            setOpenQuestions(null)
+        }
+
+        const openQuestionsForm = ()=>{
+            setOpenQuestions(<QuestionsForm closeBuyForm ={closeQuestionsForm} />)
+        }
+
     return (
         <div className = 'website-info-page'>
+            {disclaimer}
+            {buyForm}
+            {openQuestions}
             <h1 className = 'left-greeting'>Vanilla Cupcake <br />Blogger 🧁</h1> {/*title*/}
-            <h2 className = 'std-p--price'>Only $99.99</h2> 
+            <h2 className = 'std-p--price std-p--price-product-page'>Only $99.99</h2> 
             <p className = 'std-p std-p--no-margin'><i>(Plus $25 a year for hosting)</i></p>
 
 
@@ -82,9 +130,10 @@ const VanillaCupCake = () => {
                 </div>
                 <div className = 'broken-down-features-grid_image-4 grid-image'></div>
             </div> {/*Blog Steps Wrapper Ends*/}
-
-            <a href = 'https://savvy-saute.herokuapp.com' target="_blank" rel="noopener noreferrer" className = 'infoButton'>See it Live</a>
-
+            <div className = 'dual-button-wrapper'>
+                <a href = 'https://savvy-saute.herokuapp.com' target="_blank" rel="noopener noreferrer" className = 'infoButton infoButton--see-it-live'>See it Live</a>
+                <div className = 'contactButton contactButton--ourchase-asset' onClick = {openDisclaimer}>BUY NOW!</div>
+            </div>
         </div>
     )
 }

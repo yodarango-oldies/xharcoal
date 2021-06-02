@@ -152,6 +152,7 @@
     justify-content: center;
     flex-wrap: wrap;
     padding: 10% 0;
+    overflow: scroll;
 
     .close-X{
         position: absolute;
@@ -218,12 +219,20 @@
             display: block;
             margin: auto;
             width: 5rem;
+
+            @media (min-width: 700px) {
+                width: 7rem;
+            }
         }
         h6{
             width: 100%;
             text-align: center;
             font: 600 1rem $main-font;
             color: $accent-color;
+
+            @media (min-width: 700px) {
+                font: 600 1.2rem $main-font;
+            }
         }
     }
 
@@ -232,6 +241,10 @@
         height: 15rem;
         overflow: scroll;
         margin: 1rem 0;
+
+        @media (min-width: 700px) {
+            font: 400 1.5rem $main-font;
+        }
     }
 }
 

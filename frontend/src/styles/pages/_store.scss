@@ -47,6 +47,12 @@
         margin: 1.5rem 1rem  0 0;
         display: inline-block;
 
+        @media (min-width: 700px) {
+            font: 800 1.3rem $main-font;
+            padding: .5rem 0;
+            width: 6rem;
+        }
+
         &:hover{
             background-color: #242424;
             color: white;
@@ -68,6 +74,12 @@
         margin-top: 1.5rem;
         text-decoration: none;
 
+        @media (min-width: 700px) {
+            font: 800 1.3rem $main-font;
+            padding: .5rem 0;
+            width: 6rem;
+        }
+
         &:hover{
             background-color: #242424;
             color: white;
@@ -79,6 +91,21 @@
     font: 400 4rem $title-font;
 }
 
+.pay-with-paypal{
+    margin: 2rem auto;
+    font: 600 2rem $main-font;
+    color: $widget-color;
+    text-align: center;
+}
+
+.pay-with-paypal-img{
+    height: 3rem;
+    width: 6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../images/hour-glass.jpg');
+}
 ////=============== More info popup ======================///
 .std-h2{
     font: 800 2rem $main-font;
@@ -99,6 +126,12 @@
     overflow: scroll;
     z-index: 8;
 
+    ul{
+        list-style-position: inside;
+        text-align: left;
+        width: 60%;
+        margin: auto;
+    }
     @media (min-width: 700px) {
         .close-X{
             font: 400 2.5rem $main-font;
@@ -110,6 +143,14 @@
             font: 400 1.5rem $main-font;
         }
     }
+}
+.std-h3{
+font: 800 1.5rem $main-font;
+color: $accent-color;
+
+@media (min-width: 700px) {
+    font: 800 2rem $main-font;
+}
 }
 
 .store-steps-wrapper{
@@ -194,6 +235,12 @@
 }
 .confirm-order-btn{
     background-color: $accent-color;
+    color: white !important;
+    text-decoration: none;
+
+    &:hover{
+        color: #242424 !important;
+    }
 }
 
 .buy-from{
@@ -243,6 +290,8 @@
 
 ////////============Satrts Vanilla Cupcake=============////
 .website-info-page{
+    max-width: 1200px;
+    margin: auto;
     .infoButton{
         text-decoration: none;
     }
@@ -276,22 +325,41 @@
     background-position: center;
     background-size: cover;
     margin: 2rem 0;
+
+    @media (min-width: 1000px) {
+        height: 25rem;
+    }
 }
 .blog-desc_desc{
     width: 100%;
+
+    p{
+    @media (min-width: 1000px) {
+        font: 400 1.5rem $main-font;
+    }
+    }
 }
 
 .desc_step{
-    width: 14rem;
+    width: 15rem;
     margin: 1rem auto;
     text-align: left;
     color: $widget-color;
-    font: 400 1.2rem $main-font;
+    font: 800 1.2rem $main-font;
+
+    @media (min-width: 1000px) {
+        font: 800 1.5rem $main-font;
+        width: 18rem;
+    }
 
     span{
         font: 800 2rem $main-font;
         vertical-align: middle;
         color: $contact-button;
+
+        @media (min-width: 1000px) {
+            font: 800 3rem $main-font;
+        }
     }
 }
 
@@ -300,10 +368,15 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin: auto;
     height: 10rem;
     border-radius: 12px;
     background-color:rgba($color: $widget-color, $alpha: .5);
     box-sizing: border-box;
+
+    @media (min-width: 1000px) {
+        height: 15rem;
+    }
 
     div, div:nth-child(1){
         background-position: center;
@@ -317,6 +390,12 @@
         background-color: white ;
         padding: .5rem;
         box-sizing: border-box;
+
+        @media (min-width: 1000px) {
+            height: 10rem;
+            width: 10rem;
+            margin: 1rem 2rem;
+        }
     }
     div:nth-child(2){
         background-size: 70%;
@@ -353,12 +432,31 @@
     'icon4 steps4 steps4 image4 image4 image4';
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(7, minmax(7rem, auto));
-    margin: 2rem auto;
+    margin: 3.5rem auto 4rem;
     width: 100%;
-}
+    max-height: 80rem ;
+    }
+
+    @media (min-width: 1000px) {
+    display: grid;
+    grid-template-areas: 
+    'icon1 steps1 steps1 steps1 image1 image1'
+    'icon2 steps2 steps2 steps2 image2 image2'
+    'icon3 steps3 steps3 steps3 image3 image3'
+    'icon4 steps4 steps4 steps4 image4 image4';
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(7, minmax(7rem, auto));
+    margin: 7rem auto 5rem;
+    width: 100%;
+    }
+
     div{
         color: $widget-color;
         font: 400 1.2rem $main-font;
+
+        @media (min-width: 1000px) {
+            font: 400 1.4rem $main-font;
+        }
 
         h3{
             color: $secondary-color;
@@ -424,6 +522,26 @@
             grid-area: image4 ;
         }   
 
+}
+
+.contactButton--ourchase-asset{
+    text-align: center;
+}
+
+.dual-button-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+}
+.contactButton--ourchase-asset{
+    top: 0;
+    margin: 1rem 2rem;
+}
+.infoButton--see-it-live{
+    margin: 1rem 2rem;
 }
 
 /////==============Terms and Conditions pop up ===================////

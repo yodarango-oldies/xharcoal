@@ -1,4 +1,5 @@
-import SavvySaute from '../../images/savvysaute.com.png'
+import SavvySaute from '../../images/savvysaute.com.png';
+import { Link } from 'react-router-dom';
 
 const StoreCarrousel = ({openDisclaimer}) => {
 
@@ -13,7 +14,7 @@ const StoreCarrousel = ({openDisclaimer}) => {
                     </p>
                     <p className = "std-p--price">Only $99.99</p>
                     <div className = 'buy-btn' onClick = {openDisclaimer} >Buy</div>
-                    <a href="/store/vanilla-cupcake" className="try-btn">More</a> 
+                    <Link to = "/store/vanilla-cupcake" className="try-btn">More</Link> 
                 </div>
             </div>
         </div>
