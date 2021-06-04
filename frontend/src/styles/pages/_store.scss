@@ -104,7 +104,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../../images/hour-glass.jpg');
+    background-image: url('../../images/paypal-logo.png');
 }
 ////=============== More info popup ======================///
 .std-h2{
@@ -320,7 +320,7 @@ color: $accent-color;
 }
 .blog-desc_image{
     width: 100%;
-    background: url('../../images/hour-glass.jpg');
+    background: url('../../images/vanillacupcakeblogger.png');
     height: 15rem;
     background-position: center;
     background-size: cover;
@@ -476,6 +476,15 @@ color: $accent-color;
             background-position: center ;
             background-size: cover;
             margin: 2rem 0 4rem;
+
+            @media (min-width: 400px) and (max-width: 699px){
+                width: 18rem;
+                margin: 2rem auto 4rem;
+            }
+
+            @media (min-width: 800px) and (max-width: 1000px){
+                height: 18rem;
+            }
         }
         div:nth-child(1){
             background-image: url('../../images/vanilla-post.svg');
@@ -485,7 +494,7 @@ color: $accent-color;
             grid-area: steps1 ;
         }
         div:nth-child(3){
-            background-image: url('../../images/hour-glass.jpg');
+            background-image: url('../../images/step1.png');
             grid-area: image1 ;
         }
         div:nth-child(4){
@@ -496,7 +505,7 @@ color: $accent-color;
             grid-area: steps2 ;
         }
         div:nth-child(6){
-            background-image: url('../../images/hour-glass.jpg');
+            background-image: url('../../images/step2.png');
             grid-area: image2 ;
         }
         div:nth-child(7){
@@ -507,7 +516,7 @@ color: $accent-color;
             grid-area: steps3 ;
         }
         div:nth-child(9){
-            background-image: url('../../images/hour-glass.jpg');
+            background-image: url('../../images/step3.png');
             grid-area: image3 ;
         }
         div:nth-child(10){
@@ -518,7 +527,7 @@ color: $accent-color;
             grid-area: steps4 ;
         }
         div:nth-child(12){
-            background-image: url('../../images/hour-glass.jpg');
+            background-image: url('../../images/step4.png');
             grid-area: image4 ;
         }   
 

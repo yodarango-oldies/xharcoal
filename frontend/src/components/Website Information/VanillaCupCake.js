@@ -7,6 +7,8 @@ import React, {useState} from 'react'
 
 const VanillaCupCake = () => {
 
+        ///////============ background =====================
+        const [darkbkg, setDarkbkg] = useState(null)
 
 
         ///////============ open disclaimer pop up ===============
@@ -14,6 +16,7 @@ const VanillaCupCake = () => {
 
         const openDisclaimer = ()=>{
             setDisclaimer(<DisclaimerForm closeDisclaimer = {closeDisclaimer} openBuyForm = {openBuyForm}/>)
+            setDarkbkg(<div className = 'dark-bkg super-dark-bkg'></div>)
         }
     
         const closeDisclaimer = ()=>{
@@ -25,6 +28,7 @@ const VanillaCupCake = () => {
     
         const openBuyForm = ()=>{
             setDisclaimer(null)
+            setDarkbkg(null)
             setBuyForm(<BuyWebsiteForm closeBuyForm = {closeBuyForm} openQuestionsForm = {openQuestionsForm}/>)
         }
     
@@ -49,6 +53,7 @@ const VanillaCupCake = () => {
             {disclaimer}
             {buyForm}
             {openQuestions}
+            {darkbkg}
             <h1 className = 'left-greeting'>Vanilla Cupcake <br />Blogger 🧁</h1> {/*title*/}
             <h2 className = 'std-p--price std-p--price-product-page'>Only $99.99</h2> 
             <p className = 'std-p std-p--no-margin'><i>(Plus $25 a year for hosting)</i></p>
@@ -131,7 +136,7 @@ const VanillaCupCake = () => {
                 <div className = 'broken-down-features-grid_image-4 grid-image'></div>
             </div> {/*Blog Steps Wrapper Ends*/}
             <div className = 'dual-button-wrapper'>
-                <a href = 'https://savvy-saute.herokuapp.com' target="_blank" rel="noopener noreferrer" className = 'infoButton infoButton--see-it-live'>See it Live</a>
+                <a href = 'https://vanillacupcakeblogger.herokuapp.com' target="_blank" rel="noopener noreferrer" className = 'infoButton infoButton--see-it-live'>See it Live</a>
                 <div className = 'contactButton contactButton--ourchase-asset' onClick = {openDisclaimer}>BUY NOW!</div>
             </div>
         </div>

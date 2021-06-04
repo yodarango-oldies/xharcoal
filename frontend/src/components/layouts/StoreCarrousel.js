@@ -1,4 +1,4 @@
-import SavvySaute from '../../images/savvysaute.com.png';
+import vanillaBlogger from '../../images/vanillacupcakeblogger.png';
 import { Link } from 'react-router-dom';
 
 const StoreCarrousel = ({openDisclaimer}) => {
@@ -6,7 +6,7 @@ const StoreCarrousel = ({openDisclaimer}) => {
     return (
         <div className = "carrousel-display">
             <div className="web-card web-card--store">
-                <img src={ SavvySaute } alt="web design" className="web-card_img" alt = 'website thumbnail'/>
+                <img src={ vanillaBlogger } alt="web design" className="web-card_img" alt = 'website thumbnail'/>
                 <div className="web-card_desc-title">
                     <h2 className="desc-title_title">Vanilla Blogger</h2>
                     <p className="desc-title_desc">

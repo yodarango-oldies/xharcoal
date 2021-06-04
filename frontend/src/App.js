@@ -8,6 +8,7 @@ import WebDesign from './components/pages/WebDesign';
 import Store from './components/pages/Store';
 import Checkout from './components/pages/Checkout';
 import VanillaCupCake from './components/Website Information/VanillaCupCake';
+import OrderConfirmation from './components/pages/OrderConfirmation';
 
 export const App = () => {
     return (

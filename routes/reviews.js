@@ -153,11 +153,12 @@ router.post('/new-order', async (req, res)=>{
         colorThree   : req.body.colorThree,
         domainOne    : req.body.domainOne,
         domainTwo    : req.body.domainTwo,
-        domainThree  : req.body.domainThree
+        domainThree  : req.body.domainThree,
+        date         : Date.now().toLocaleString
     }
     const msg = {
 
-        to: 'paradymuseless@gmail.com', // Change to your recipient
+        to: specsInfo.email, // Change to your recipient
         from: 'xharccoal@gmail.com', // Change to your verified sender
         subject: `thank you for your purchase`,
         text: `from contact form`,
@@ -169,8 +170,8 @@ router.post('/new-order', async (req, res)=>{
         <h4>Secondary Color: ${specsInfo.colorTwo}</h4>
         <h4>Third Color: ${specsInfo.colorThree}</h4>
         <h4>First Domain: ${specsInfo.domainOne}</h4>
-        <h4>${specsInfo.domainTwo}</h4>
-        <h4>${specsInfo.domainThree}</h4>
+        <h4>Scond Domain: ${specsInfo.domainTwo}</h4>
+        <h4>Third Domain: ${specsInfo.domainThree}</h4>
         `
       }
 
@@ -179,7 +180,7 @@ router.post('/new-order', async (req, res)=>{
         await newOrderSpecs.save();
 
         await sgMail.send(msg);
-        res.redirect('/store/checkout');
+        res.status(200);
     } catch (error) {
         console.log(error)
     }
