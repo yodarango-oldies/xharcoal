@@ -6,26 +6,6 @@ const BuyWebsiteForm = ({closeBuyForm, openQuestionsForm}) => {
        e.currentTarget.style.backgroundColor = e.currentTarget.value
    }
 
-//    const [emptyField, setemptyField] = useState('');
-//    const [proceedLink, setproceedLink] = useState('#');
-   
-//    const hiddenButton = document.querySelector('#hidden-button');
-//    const inputField = document.querySelectorAll('.inputRequired');
-
-
-//    const sucessFill = async ()=>{
-//     setproceedLink('/store/checkout');
-//     hiddenButton.click()
-//    }
-
-//    const checkInput = ()=>{
-
-//        inputField.forEach(field => {
-
-//            field.value == '' || field.value === null ? setemptyField("Please fillout all fields") : sucessFill();
-//        })
-//    }
-
     return (
         <div className = 'view-asset'>
             <span className = "close-X" onClick = { closeBuyForm }>X</span>

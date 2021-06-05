@@ -1,4 +1,4 @@
-//require('dotenv').config()
+require('dotenv').config()
 
 const express      = require('express');
 const router       = express.Router();
@@ -6,7 +6,7 @@ const Review       = require('../models/reviews')
 const UniqueCode   = require('../models/UniqueCodes');
 const NewOrder     = require('../models/Orders');
 const OrderSpecs   = require('../models/OrderSpecs')
-const sgMail = require('@sendgrid/mail');
+const sgMail       = require('@sendgrid/mail');
 
 sgMail.setApiKey(process.env.SEND_GRID);
 
@@ -154,7 +154,7 @@ router.post('/new-order', async (req, res)=>{
         domainOne    : req.body.domainOne,
         domainTwo    : req.body.domainTwo,
         domainThree  : req.body.domainThree,
-        date         : Date.now().toLocaleString
+        date         : Date.now()
     }
     const msg = {
 
@@ -175,12 +175,14 @@ router.post('/new-order', async (req, res)=>{
         `
       }
 
-      const newOrderSpecs = new OrderSpecs({...req.body});
-    try {
-        await newOrderSpecs.save();
+      const newOrderSpecs = new OrderSpecs(specsInfo);
+      console.log(req.body)
 
+    try {
+
+        await newOrderSpecs.save();
         await sgMail.send(msg);
-        res.status(200);
+        res.redirect('/store/checkout');
     } catch (error) {
         console.log(error)
     }
