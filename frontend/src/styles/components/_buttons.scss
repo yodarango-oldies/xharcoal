@@ -191,14 +191,12 @@
         transform: rotate(180deg);
     }
     @media (min-width: 700px) {
+        top: -38rem;
+    }
+    @media (max-height: 900px) and (max-width: 700px) {
         top: -32rem;
     }
-    @media (max-height: 700px) and (max-width: 900px) {
-        top: -35rem;
-    }
-    // @media (min-width: 1000px) and (max-height: 749) {
-    //     top: -5rem;
-    // }
+
     @media (min-width: 1000px) and (min-height: 750px){
         top: -15rem;
     }
