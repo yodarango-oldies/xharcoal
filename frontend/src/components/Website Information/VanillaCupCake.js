@@ -21,6 +21,7 @@ const VanillaCupCake = () => {
     
         const closeDisclaimer = ()=>{
             setDisclaimer(null)
+            setDarkbkg(null)
         }
         ///////============= open buy pop up ============
     
