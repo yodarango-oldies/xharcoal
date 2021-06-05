@@ -1,4 +1,4 @@
-import vector from '../../images/hour-glass.jpg'
+import vector from '../../images/3D-vector.png'
 const ThreeDVector = () => {
     return (
         <div className = "half-vw-right">
