@@ -64,7 +64,7 @@ router.get('/unique-code', async (req, res)=>{
 
 router.post('/contact', async (req, res)=>{
     const msg = {
-      to: 'xharccoal@gmail.com', // Change to your recipient
+      to: 'drangelll@outlook.com', // Change to your recipient
       from: 'xharccoal@gmail.com', // Change to your verified sender
       subject: `${req.body.name} has sent a contact form`,
       text: `from contact form`,
@@ -91,7 +91,7 @@ router.post('/contact', async (req, res)=>{
 
 router.post('/question', async (req, res)=>{
     const msg = {
-      to: 'xharccoal@gmail.com', // Change to your recipient
+      to: 'drangelll@outlook.com', // Change to your recipient
       from: 'xharccoal@gmail.com', // Change to your verified sender
       subject: `${req.body.name} has a question`,
       text: `from contact form`,
@@ -101,7 +101,7 @@ router.post('/question', async (req, res)=>{
       <h1 style= "font: 600 2rem Arial; color: purple; text-align: center; width: 90%; max-width: 500px; margin: auto; line-height: 2em;">${req.body.name} has a question </h1>
       
       <p style= "font: 400 1.2rem Arial; color: #242424; text-align: center; width: 90%; max-width: 500px; margin: auto; line-height: 2em; ">Here is their question:</p>
-      <p>${req.body.message}</p>
+      <p style= "font: 400 1.2rem Arial; color: #242424; text-align: center; width: 90%; max-width: 500px; margin: auto; line-height: 2em; ">${req.body.message}</p>
       <br><br>
       <p style= "font: 400 1.2rem Arial; color: #242424; text-align: center; width: 90%; max-width: 500px; margin: auto; line-height: 2em; ">Respomd to ${req.body.email} or ${req.body.phone}</p>
       `
@@ -174,7 +174,7 @@ router.post('/new-order', async (req, res)=>{
     }
     const msg = {
 
-        to: 'xharccoal@gmail.com', // Change to your recipient
+        to: 'drangelll@outlook.com', // Change to your recipient
         from: 'xharccoal@gmail.com', // Change to your verified sender
         subject: `${req.body.name} has made a purchase`,
         text: `from contact form`,

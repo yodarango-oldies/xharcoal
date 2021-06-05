@@ -16,7 +16,7 @@ const [redir, setredir] = useState({
         {
           description: "Vanilla Blog",
           amount: {
-            value: "0.50",
+            value: "99.99",
           },
         },
       ],

@@ -126,6 +126,10 @@
     overflow: scroll;
     z-index: 8;
 
+    .std-p{
+        color: #242424 !important;
+    }
+
     ul{
         list-style-position: inside;
         text-align: left;
@@ -292,6 +296,11 @@ color: $accent-color;
 .website-info-page{
     max-width: 1200px;
     margin: auto;
+
+    .std-h3{
+        text-align: center;
+    }
+
     .infoButton{
         text-decoration: none;
     }
