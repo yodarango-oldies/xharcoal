@@ -64,15 +64,21 @@ router.get('/unique-code', async (req, res)=>{
 
 router.post('/contact', async (req, res)=>{
     const msg = {
-      to: 'paradymuseless@gmail.com', // Change to your recipient
+      to: 'xharccoal@gmail.com', // Change to your recipient
       from: 'xharccoal@gmail.com', // Change to your verified sender
       subject: `${req.body.name} has sent a contact form`,
       text: `from contact form`,
-      html: `<h1>${req.body.name}</h1>
-      <h4>${req.body.email}</h4>
-      <h4>${req.body.phone}</h4>
-      <h5>${req.body.company}</h5>
-      <p>${req.body.message}</p>
+      html: `
+      <img src = "http://cdn.mcauto-images-production.sendgrid.net/24432b2dc9ca8556/015b9b89-48fb-45bb-b74e-5428c7ebe06f/10000x10000.png" style="width: 350px; display: block; margin: 2rem auto;">
+
+      <h1 style= "font: 600 2rem Arial; color: purple; text-align: center; width: 90%; max-width: 500px; margin: auto; line-height: 2em;">has sent you a contact form.</h1>
+      
+      <p style= "font: 400 1.2rem Arial; color: #242424; text-align: center; width: 90%; max-width: 500px; margin: auto; line-height: 2em; ">Here is their information:</p>
+      <h1>name: ${req.body.name}</h1>
+      <h4>email: ${req.body.email}</h4>
+      <h4>phone number: ${req.body.phone}</h4>
+      <h5>comapny: ${req.body.company}</h5>
+      <p>message: ${req.body.message}</p>
       <p>preferred contact medium: ${req.body.contactVia}</p>`,
     }
     try {
@@ -85,14 +91,20 @@ router.post('/contact', async (req, res)=>{
 
 router.post('/question', async (req, res)=>{
     const msg = {
-      to: 'paradymuseless@gmail.com', // Change to your recipient
+      to: 'xharccoal@gmail.com', // Change to your recipient
       from: 'xharccoal@gmail.com', // Change to your verified sender
       subject: `${req.body.name} has a question`,
       text: `from contact form`,
-      html: `<h1>${req.body.name}</h1>
-      <h4>${req.body.email}</h4>
-      <h4>${req.body.phone}</h4>
-      <p>${req.body.message}</p>`
+      html: `
+      <img src = "http://cdn.mcauto-images-production.sendgrid.net/24432b2dc9ca8556/015b9b89-48fb-45bb-b74e-5428c7ebe06f/10000x10000.png" style="width: 350px; display: block; margin: 2rem auto;">
+
+      <h1 style= "font: 600 2rem Arial; color: purple; text-align: center; width: 90%; max-width: 500px; margin: auto; line-height: 2em;">${req.body.name} has a question </h1>
+      
+      <p style= "font: 400 1.2rem Arial; color: #242424; text-align: center; width: 90%; max-width: 500px; margin: auto; line-height: 2em; ">Here is their question:</p>
+      <p>${req.body.message}</p>
+      <br><br>
+      <p style= "font: 400 1.2rem Arial; color: #242424; text-align: center; width: 90%; max-width: 500px; margin: auto; line-height: 2em; ">Respomd to ${req.body.email} or ${req.body.phone}</p>
+      `
     }
     try {
         await sgMail.send(msg);
@@ -119,16 +131,20 @@ router.post('/purchase-confirmation', async (req,res)=>{
         to: orderInfo.PayerEmail, // Change to your recipient
         from: 'xharccoal@gmail.com', // Change to your verified sender
         subject: `thank you for your purchase`,
-        text: `from contact form`,
+        text: `new purchase email`,
         html: `
-        <h4>Created at: ${orderInfo.TimeCreated}</h4>
-        <h4>Order Id: ${orderInfo.OrderId}</h4>
-        <h4>Order Status: ${orderInfo.OrderStatus}</h4>
-        <h4>Payer Email: ${orderInfo.PayerEmail}</h4>
-        <h4>Payer Id: ${orderInfo.PayerId}</h4>
-        <h4>Payer Name: ${orderInfo.PayerName}</h4>
-        <h4>Item Description: ${orderInfo.ItemDescription}</h4>
-        <a href = '${orderInfo.OrderLink}'>see your order</a>
+
+        <img src = "http://cdn.mcauto-images-production.sendgrid.net/24432b2dc9ca8556/015b9b89-48fb-45bb-b74e-5428c7ebe06f/10000x10000.png" style="width: 350px; display: block; margin: 2rem auto;">
+
+        <h1 style= "font: 600 2rem Arial; color: purple; text-align: center; width: 90%; max-width: 500px; margin: auto; line-height: 2em;">Thank you, ${orderInfo.PayerName} for your purchase!</h1>
+        
+        <p style= "font: 400 1.2rem Arial; color: #242424; text-align: center; width: 90%; max-width: 500px; margin: auto; line-height: 2em; ">You will be receiving an email from Xharcoal soon once your blog is set up! 😊</p>
+        
+        <h1 style= "font: 600 1.8rem Arial; color: #242424; text-align: center; width: 90%; max-width: 500px; margin: auto; line-height: 2em;"> <br><br> So, what is next?</h1>
+          
+         <p style= "font: 400 1.2rem Arial; color: #242424; text-align: center; width: 90%; max-width: 500px; margin: auto; line-height: 2em;" >Literally just wait! No extra payments are due at the moment. The price for hosting, $25 USD, is not due until after a year of service. You will be sent an invoice to ${orderInfo.PayerEmail} after every year you have owened your blog, therefore make sure that you notify Xharcoal should you change your email address. </p>
+        
+         <p style= "font: 400 1.2rem Arial; color: #3399ff; text-align: center; width: 90%; max-width: 500px; margin: auto; line-height: 2em;" > <br>if you have any questions in the mean time do not doubt to contact Xharcoal!</p>
         `
       }
       const newOrderCreated = new NewOrder(orderInfo)
@@ -158,11 +174,17 @@ router.post('/new-order', async (req, res)=>{
     }
     const msg = {
 
-        to: specsInfo.email, // Change to your recipient
+        to: 'xharccoal@gmail.com', // Change to your recipient
         from: 'xharccoal@gmail.com', // Change to your verified sender
-        subject: `thank you for your purchase`,
+        subject: `${req.body.name} has made a purchase`,
         text: `from contact form`,
-        html: `
+        html: 
+        `
+        <img src = "http://cdn.mcauto-images-production.sendgrid.net/24432b2dc9ca8556/015b9b89-48fb-45bb-b74e-5428c7ebe06f/10000x10000.png" style="width: 350px; display: block; margin: 2rem auto;">
+
+        <h1 style= "font: 600 2rem Arial; color: purple; text-align: center; width: 90%; max-width: 500px; margin: auto; line-height: 2em;">Great, you have a new order</h1>
+        
+        <p style= "font: 400 1.2rem Arial; color: #242424; text-align: center; width: 90%; max-width: 500px; margin: auto; line-height: 2em; ">Here are their blog preferences: </p>
         <h4>Name: ${specsInfo.name}</h4>
         <h4>Phone: ${specsInfo.phone}</h4>
         <h4>Email: ${specsInfo.email}</h4>

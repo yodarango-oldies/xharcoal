@@ -10,7 +10,7 @@ const orderSpecsSchema = new mongoose.Schema({
     domainOne       : String,
     domainTwo       : String,
     domainThree     : String,
-    date            : String
+    date            : Date
 })
 
 const OrderSpecs = mongoose.model('OrderSpecs', orderSpecsSchema);
