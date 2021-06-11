@@ -8,15 +8,11 @@ const AboutCard = () => {
 				className='about-card_img'
 			/>
 			<p className='about-description'>
-				Lorem Ipsum is simply dummy text of the printing and typesetting
-				industry. Lorem Ipsum has been the industry's standard dummy text
-				ever since the 1500s, when an unknown printer took a galley of type
-				and scrambled it to make a type specimen book. It has survived not
-				only five centuries, but also the leap into electronic typesetting,
-				remaining essentially unchanged. It was popularised in the 1960s
-				with the release of Letraset sheets containing Lorem Ipsum passages,
-				and more recently with desktop publishing software like Aldus
-				PageMaker including versions of Lorem Ipsum
+				{`Hello, My name is Daniel R. and I am a passionate web developer who loves to code. I am the person behind the curtains of this and many other websites and web apps. 
+                I graduated with a degree in cyber security in 2019 but decided to dive into the software development and Graphic design world shortly after. Upon a couple years of working for a company and 
+                creating projects for personal use I decided to offer my services to clients and open my small start up company, Xharcoal. 
+                
+                My main goal is to make of Xharcoal a big, reputable, and successful enterprise. Do you need a website, graphic design, or web app? Let me do that for you! 😉`}
 			</p>
 		</div>
 	);
