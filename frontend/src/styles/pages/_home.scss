@@ -1,392 +1,416 @@
+.greeting_turning,
+.greeting_into {
+	height: 2.5rem;
+	display: inline-block;
+	vertical-align: text-top;
+	overflow-y: hidden;
+	position: relative;
+	bottom: -13px;
 
-.greeting_turning, .greeting_into{
-    height: 2.5rem;
-    display: inline-block;
-    vertical-align: text-top;
-    overflow-y: hidden;
-    position: relative;
-    bottom: -13px;
+	@media (min-width: 1000px) {
+		width: 14.3rem;
+	}
 
-    @media (min-width: 1000px) {
-        width: 14.3rem;
-    }
+	span {
+		position: relative;
+		animation: greeting 16000ms linear infinite;
 
-    span{
-    position: relative;
-    animation: greeting 16000ms linear infinite;
-    
-    @media (min-width: 1000px) {
-        display: inline-block;
-        width: 100%;
-    }
-    }
+		@media (min-width: 1000px) {
+			display: inline-block;
+			width: 100%;
+		}
+	}
 }
 @keyframes greeting {
-    0% {top: 30px; }
-    100% {top: -255px; }
+	0% {
+		top: 30px;
+	}
+	100% {
+		top: -255px;
+	}
 }
 
-.wave-wrapper{
-    width: 100%;
-    height: 8rem;
-    position: absolute;
-    bottom: 0;
-    overflow: hidden;
-    z-index: 2;
-    transition: height 500ms ease-in-out;
+.wave-wrapper {
+	width: 100%;
+	height: 8rem;
+	position: absolute;
+	bottom: 0;
+	overflow: hidden;
+	z-index: 2;
+	transition: height 500ms ease-in-out;
 
-    @media (min-width: 700px) {
-        height: 11rem;
-        bottom: -3rem;
-    }
-    @media (max-height: 650px) {
-       display: none;
-    }
+	@media (min-width: 700px) {
+		height: 11rem;
+		bottom: -3rem;
+	}
+	@media (max-height: 650px) {
+		display: none;
+	}
 }
 
-.wave1{
-    position: relative;
-    top: 0;
-    width: 100%;
-    background: url(../../images/wave1.svg) ;
-    background-position: 0% 0%;
-    background-repeat: repeat-x;
-    background-size: 1000px;
-    height: 100%;
-    animation: wave1 60s linear infinite alternate;
+.wave1 {
+	position: relative;
+	top: 0;
+	width: 100%;
+	background: url(../../images/wave1.svg);
+	background-position: 0% 0%;
+	background-repeat: repeat-x;
+	background-size: 1000px;
+	height: 100%;
+	animation: wave1 60s linear infinite alternate;
 
-    @media (min-width: 700px) {
-        top: 3rem;
-    }
+	@media (min-width: 700px) {
+		top: 3rem;
+	}
 }
-.wave2{
-    position: relative;
-    top: -100px;
-    width: 100%;
-    background: url(../../images/wave2.svg) ;
-    background-position: 0% -5%;
-    background-repeat: repeat-x;
-    background-size: 1000px;
-    height: 100%;
-    animation: wave2 60s linear infinite alternate;
-    transition: top 500ms ease-in-out;
+.wave2 {
+	position: relative;
+	top: -100px;
+	width: 100%;
+	background: url(../../images/wave2.svg);
+	background-position: 0% -5%;
+	background-repeat: repeat-x;
+	background-size: 1000px;
+	height: 100%;
+	animation: wave2 60s linear infinite alternate;
+	transition: top 500ms ease-in-out;
 }
 //open waves
-.wave-wrapper--open{
-    height: 30rem;
-    transition: height 500ms ease-in-out;
+.wave-wrapper--open {
+	height: 30rem;
+	transition: height 500ms ease-in-out;
 
-     @media (min-width: 700px) {
-        height: 35rem;
-    }
-    .infoButton{
-        display: block;
-        position: absolute;
-        top: 23rem;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        max-height: 3.5rem;
+	@media (min-width: 700px) {
+		height: 35rem;
+	}
+	.infoButton {
+		display: block;
+		position: absolute;
+		top: 23rem;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		max-height: 3.5rem;
 
-        @media (min-width: 700px) {
-            top: 28rem;
-        }
-    }
+		@media (min-width: 700px) {
+			top: 28rem;
+		}
+	}
 
-    .infoButton-leave-rvw--open{
-    display: none;
-    }
+	.infoButton-leave-rvw--open {
+		display: none;
+	}
 }
-.wave2--open{
-    top: -470px;
-    transition: top 500ms ease-in-out;
-
+.wave2--open {
+	top: -470px;
+	transition: top 500ms ease-in-out;
 }
 
 @keyframes wave1 {
-    0% {background-position: 0% -5%;}
-    100% {background-position: 3000px -5%;}
+	0% {
+		background-position: 0% -5%;
+	}
+	100% {
+		background-position: 3000px -5%;
+	}
 }
 @keyframes wave2 {
-    0% { background-position: 2000px -5%; }
-    100% { background-position: 0px -5%; }
+	0% {
+		background-position: 2000px -5%;
+	}
+	100% {
+		background-position: 0px -5%;
+	}
 }
-.reviewsWrapper{
-    width: 100%;
-    position: absolute;
-    top: 10rem;
-    z-index: 6;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
+.reviewsWrapper {
+	width: 100%;
+	position: absolute;
+	top: 10rem;
+	z-index: 6;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	overflow-x: scroll;
 
-    @media (min-width: 700px) {
-        top: 13rem;
-    }
+	@media (min-width: 700px) {
+		top: 13rem;
+	}
 }
-.reviews-card{
-    width: 20rem;
-    height: 12rem;
-    background-color: white;
-    border-radius: 15px;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: repeat(6, 1fr);
-    font-family: $main-font;
-    margin: auto;
-    flex-shrink: 0;
-    margin: 0 1rem;
+.reviews-card {
+	width: 20rem;
+	height: 12rem;
+	background-color: white;
+	border-radius: 15px;
+	display: grid;
+	grid-template-columns: 40% 60%;
+	grid-template-rows: repeat(6, 1fr);
+	font-family: $main-font;
+	margin: auto;
+	flex-shrink: 0;
+	margin: 0 1rem;
 
-    @media (min-width: 1000px) {
-        width: 26rem;
-        height: 14rem;
-    }
-}
-
-.image-wrapper{
-    grid-column: 1/2;
-    grid-row: 1/4;
-    margin: 1rem 0 0 25%;
-    width: 5rem;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(105deg,  $accent-color, $contact-button);
-    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-
+	@media (min-width: 1000px) {
+		width: 26rem;
+		height: 14rem;
+	}
 }
 
-.reviews-card_image{
-    width: 4.2rem;
-    height: 4.2rem;
-    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    background-size: cover;
-    background-position: center;
-
-}
-.reviews-card_review-by{
-    grid-column: 2/3;
-    grid-row: 1/2;
-    color: $widget-color;
-    margin-top: 1rem ;
-}
-.reviews-card_name{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    color: $font-color;
-}
-.reviews-card_stars{
-    grid-column: 2/3;
-    grid-row: 3/4;
-    background-position: left;
-    background-repeat: no-repeat;
-}
-.oneStars{
-    background-size: 30px;
-    background-image: url(../../images/stars-1-stars.svg);
-}
-.oneHalfStars{
-    background-size: 50px;
-    background-image: url(../../images/stars-1.5-stars.svg);
-}
-.twoStars{
-    background-size: 60px;
-    background-image: url(../../images/stars-2-stars.svg);
-}
-.twoHalfStars{
-    background-size: 80px;
-    background-image: url(../../images/stars-2.5-stars.svg);
-}
-.threeStars{
-    background-size: 90px;
-    background-image: url(../../images/stars-3-stars.svg);
-}
-.threeHalfStars{
-    background-size: 100px;
-    background-image: url(../../images/stars-3.5-stars.svg);
-}
-.fourStars{
-    background-size: 115px;
-    background-image: url(../../images/stars-4-stars.svg);
-}
-.fourHalfStars{
-    background-size: 130px;
-    background-image: url(../../images/stars-4.5-stars.svg);
-}
-.fiveStars{
-    background-size: 145px;
-    background-image: url(../../images/stars-5-stars.svg);
+.image-wrapper {
+	grid-column: 1/2;
+	grid-row: 1/4;
+	margin: 1rem 0 0 25%;
+	width: 5rem;
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(105deg, $accent-color, $contact-button);
+	clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 }
 
-.reviews-card_parragraph{
-    grid-column: 1/3;
-    grid-row: 4/7;
-    height: 4rem;
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+.reviews-card_image {
+	width: 4.2rem;
+	height: 4.2rem;
+	clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+	background-size: cover;
+	background-position: center;
+}
+.reviews-card_review-by {
+	grid-column: 2/3;
+	grid-row: 1/2;
+	color: $widget-color;
+	margin-top: 1rem;
+}
+.reviews-card_name {
+	grid-column: 2/3;
+	grid-row: 2/3;
+	color: $font-color;
+}
+.reviews-card_stars {
+	grid-column: 2/3;
+	grid-row: 3/4;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+.oneStars {
+	background-size: 30px;
+	background-image: url(../../images/stars-1-stars.svg);
+}
+.oneHalfStars {
+	background-size: 50px;
+	background-image: url(../../images/stars-1.5-stars.svg);
+}
+.twoStars {
+	background-size: 60px;
+	background-image: url(../../images/stars-2-stars.svg);
+}
+.twoHalfStars {
+	background-size: 80px;
+	background-image: url(../../images/stars-2.5-stars.svg);
+}
+.threeStars {
+	background-size: 90px;
+	background-image: url(../../images/stars-3-stars.svg);
+}
+.threeHalfStars {
+	background-size: 100px;
+	background-image: url(../../images/stars-3.5-stars.svg);
+}
+.fourStars {
+	background-size: 115px;
+	background-image: url(../../images/stars-4-stars.svg);
+}
+.fourHalfStars {
+	background-size: 130px;
+	background-image: url(../../images/stars-4.5-stars.svg);
+}
+.fiveStars {
+	background-size: 145px;
+	background-image: url(../../images/stars-5-stars.svg);
+}
 
-    @media (min-width: 1000px) {
-        margin: 1rem;
-        width: 23rem;
-    }
+.reviews-card_parragraph {
+	grid-column: 1/3;
+	grid-row: 4/7;
+	height: 4rem;
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+
+	@media (min-width: 1000px) {
+		margin: 1rem;
+		width: 23rem;
+	}
 }
 
 ////============= open Leave a review form ================//
-.std-form-review{
-    z-index: 9;
-    overflow-y: scroll;
-    padding: 2rem 0 0;
-    background-color: rgba($color: $widget-color, $alpha: .8);
-    animation: growFromMedium 500ms ease-in-out;
+.std-form-review {
+	z-index: 9;
+	overflow-y: scroll;
+	padding: 2rem 0 0;
+	background-color: rgba($color: $widget-color, $alpha: 0.8);
+	animation: growFromMedium 500ms ease-in-out;
 
-    button{ 
-        background-color: $secondary-color;
-        color: white;
-        position: relative;
-    }
-    input[type=text], input[type=email], textarea{
-        margin: 1.5rem auto
-    }
-    .std-p{
-        color: $accent-color;
-        margin: 1.5rem auto 0;
-    }
-}
-
-.starsWrapper, .avatarWrapper{
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-flow: column;
-    flex-wrap: nowrap;
-    width: 90%;
-    height: 10rem;
-    overflow: scroll;
-    background-color: rgba($color: $widget-color, $alpha: 1);
-    padding: 1rem;
-    border-radius: 12px;
-    margin: 1.5rem 0;
-
-    label{
-        display: block;
-        width: 100%;
-    }
-    input{
-        width: 10px;
-        display: none;
-    }
-    div{
-        width: 90%;
-        height: 3rem;
-        background-position: left;
-        background-repeat: no-repeat;
-        display: inline-block;
-        filter: grayscale(1);
-    }
-    input:checked + div{
-        filter: grayscale(0);
-    }
+	button {
+		background-color: $secondary-color;
+		color: white;
+		position: relative;
+	}
+	input[type='text'],
+	input[type='email'],
+	textarea {
+		margin: 1.5rem auto;
+	}
+	.std-p {
+		color: $accent-color;
+		margin: 1.5rem auto 0;
+	}
 }
 
-.avatarWrapper{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-flow: row;
-    flex-wrap: nowrap;
+.starsWrapper,
+.avatarWrapper {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-flow: column;
+	flex-wrap: nowrap;
+	width: 90%;
+	height: 10rem;
+	overflow: scroll;
+	background-color: rgba($color: $widget-color, $alpha: 1);
+	padding: 1rem;
+	border-radius: 12px;
+	margin: 1.5rem 0;
 
-    div{
-        width: 5rem;
-        height: 5rem;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: inline-block;
-        filter: grayscale(1);
-        clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    }
-
-    label{
-        padding: .5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(105deg,  $accent-color, $contact-button);
-        clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-        margin:  0 .5rem;
-        display: block;
-        width: 6rem;
-        height: 6rem;
-    }
-}
-.avatarOne{
-    background-image: url('../../images/Avatar1.png');
-}
-.avatarTwo{
-    background-image: url('../../images/Avatar11.png');
-}
-.avatarThree{
-    background-image: url('../../images/Avatar3.png');
-}
-.avatarFour{
-    background-image: url('../../images/Avatar4.png');
-}
-.avatarFive{
-    background-image: url('../../images/Avatar5.png');
-}
-.avatarSix{
-    background-image: url('../../images/Avatar6.png');
-}
-.avatarSeven{
-    background-image: url('../../images/Avatar7.png');
-}
-.avatarEight{
-    background-image: url('../../images/Avatar8.png');
-}
-.avatarNine{
-    background-image: url('../../images/Avatar9.png');
-}
-.avatarTen{
-    background-image: url('../../images/Avatar10.png');
+	label {
+		display: block;
+		width: 100%;
+	}
+	input {
+		width: 10px;
+		display: none;
+	}
+	div {
+		width: 90%;
+		height: 3rem;
+		background-position: left;
+		background-repeat: no-repeat;
+		display: inline-block;
+		filter: grayscale(1);
+	}
+	input:checked + div {
+		filter: grayscale(0);
+	}
 }
 
-.std-form-unlock-review{
-    height: 330px;
-    max-width: 500px;
-    margin: 10rem auto;
-    animation: growFormSmall 500ms ease-in-out;
-    flex-direction: column;
-    flex-wrap: nowrap;
+.avatarWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-flow: row;
+	flex-wrap: nowrap;
 
-    .infoButton{
-        position: relative;
-        top: 0;
-    }
+	div {
+		width: 5rem;
+		height: 5rem;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: inline-block;
+		filter: grayscale(1);
+		clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+	}
 
-    p{
-        width: 100%;
-    }
+	label {
+		padding: 0.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(105deg, $accent-color, $contact-button);
+		clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+		margin: 0 0.5rem;
+		display: block;
+		width: 6rem;
+		height: 6rem;
+	}
+}
+.avatarOne {
+	background-image: url('../../images/Avatar1.png');
+}
+.avatarTwo {
+	background-image: url('../../images/Avatar11.png');
+}
+.avatarThree {
+	background-image: url('../../images/Avatar3.png');
+}
+.avatarFour {
+	background-image: url('../../images/Avatar4.png');
+}
+.avatarFive {
+	background-image: url('../../images/Avatar5.png');
+}
+.avatarSix {
+	background-image: url('../../images/Avatar6.png');
+}
+.avatarSeven {
+	background-image: url('../../images/Avatar7.png');
+}
+.avatarEight {
+	background-image: url('../../images/Avatar8.png');
+}
+.avatarNine {
+	background-image: url('../../images/Avatar9.png');
+}
+.avatarTen {
+	background-image: url('../../images/Avatar10.png');
+}
 
-    input{
-        margin-top: 3.5rem ;
-        width: 90%;
-    }
+.std-form-unlock-review {
+	height: 330px;
+	max-width: 500px;
+	margin: 10rem auto;
+	animation: growFormSmall 500ms ease-in-out;
+	flex-direction: column;
+	flex-wrap: nowrap;
+
+	.infoButton {
+		position: relative;
+		top: 0;
+	}
+
+	p {
+		width: 100%;
+	}
+
+	input {
+		margin-top: 3.5rem;
+		width: 90%;
+	}
 }
 
 @keyframes growFormSmall {
-    0% {height: 700px; margin-top: 6rem;}
-    100% {height: 330px; margin-top: 10rem;}
+	0% {
+		height: 700px;
+		margin-top: 6rem;
+	}
+	100% {
+		height: 330px;
+		margin-top: 10rem;
+	}
 }
 
 @keyframes growFromMedium {
-    0% {height: 300px; margin-top: 6rem;}
-    100% {height: 700px; margin-top: 4rem;}
+	0% {
+		height: 300px;
+		margin-top: 6rem;
+	}
+	100% {
+		height: 700px;
+		margin-top: 4rem;
+	}
 }

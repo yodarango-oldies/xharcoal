@@ -1,85 +1,84 @@
-body{
-    background-color: $background-color;
+body {
+	background-color: $background-color;
 }
-.left-greeting{
-    font: 400 2.8rem $title-font;
-    color: $contrast;
+.left-greeting {
+	font: 400 2.8rem $title-font;
+	color: $contrast;
 
-    @media (min-width: 700px) {
-        font: 400 3.5rem $title-font;
-    }
-    @media (min-width: 1000px) {
-        font: 400 5rem $title-font;
-    }
-}
-
-.left-greeting-home{
-
-    @media (min-width: 1000px) {
-        margin: 7rem 0 0 0;
-        font: 400 4rem $title-font;
-        text-align: left;
-        max-width: 650px;
-    }
-}
-.dark-bkg{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.6);
-    top: 0;
-    left: 0;
-    z-index: 7;
-}
-.dark-bkg--close{
-    display: none;
+	@media (min-width: 700px) {
+		font: 400 3.5rem $title-font;
+	}
+	@media (min-width: 1000px) {
+		font: 400 5rem $title-font;
+	}
 }
 
-.close-X{
-    color: rgba(0, 0, 0, 0.6);
-    font: 400 2rem $main-font;
+.left-greeting-home {
+	@media (min-width: 1000px) {
+		margin: 7rem 0 0 0;
+		font: 400 4rem $title-font;
+		text-align: left;
+		max-width: 650px;
+	}
+}
+.dark-bkg {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.6);
+	top: 0;
+	left: 0;
+	z-index: 7;
+}
+.dark-bkg--close {
+	display: none;
+}
 
-    &:hover{
-        cursor: pointer;
-    }
+.close-X {
+	color: rgba(0, 0, 0, 0.6);
+	font: 400 2rem $main-font;
+
+	&:hover {
+		cursor: pointer;
+	}
 }
 .std-p--important {
-    color: $contact-button;
-    font: 400 1.2rem $main-font;
-    border-radius: 10px;
-    font-style: italic;
-    margin: 0 auto 2rem;
-    width: 100%;
-    text-align: center;
+	color: $contact-button;
+	font: 400 1.2rem $main-font;
+	border-radius: 10px;
+	font-style: italic;
+	margin: 0 auto 2rem;
+	width: 100%;
+	text-align: center;
 
-    @media (min-width: 700px) {
-        font: 400 1.5rem $main-font;
-    }
+	@media (min-width: 700px) {
+		font: 400 1.5rem $main-font;
+	}
 }
 
-.website-info-page{
-    width: 90%;
-    margin: auto;
+.website-info-page {
+	width: 90%;
+	margin: auto;
 }
 
-.std-p--price{
-    color: green;
-    font: 800 1.5rem $main-font;
-    font-style: italic;
-    margin: 0 auto 2rem;
+.std-p--price {
+	color: green;
+	font: 800 1.5rem $main-font;
+	font-style: italic;
+	margin: 0 auto 2rem;
 }
-.spacer{
-    height: 3rem;
-    width: 100%;
+.spacer {
+	height: 3rem;
+	width: 100%;
 }
 // input:invalid {
 //     background-color: rgb(218, 107, 107);
 //   }
 
-.super-dark-bkg{
-    background-color: rgba(0, 0, 0, 0.8);
+.super-dark-bkg {
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
-.hide-block{
-    display: none;
+.hide-block {
+	display: none;
 }

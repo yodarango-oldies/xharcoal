@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import MainButton from "../buttons/MainButton";
+import React, { useState } from 'react';
+import MainButton from '../buttons/MainButton';
 import MoreInfoBlock from '../layouts/MoreInfoBlock';
 import StoreCarrousel from '../layouts/StoreCarrousel';
 import BuyWebsiteForm from '../layouts/BuyWebsiteForm';
@@ -7,82 +7,98 @@ import QuestionsForm from '../layouts/QuestionsForm';
 import DisclaimerForm from '../layouts/DisclaimerForm';
 
 const Store = () => {
+	//===========open more info popup=============
 
-    //===========open more info popup=============
+	const [openFormAbt, setOpenForm] = useState(null);
+	const [backgroundAbt, setBackground] = useState(false);
+	const [buttonStyleAbt, setButtonStyle] = useState({
+		newClass: 'infoButton',
+		text: 'More Info',
+	});
 
-    const [openFormAbt, setOpenForm] = useState(null);
-    const [backgroundAbt, setBackground] = useState(false)
-    const [buttonStyleAbt, setButtonStyle] = useState({
-        newClass: 'infoButton',
-        text: 'More Info'
-    })
+	const closeForm = () => {
+		setOpenForm(null);
+		setBackground(false);
+		setButtonStyle({
+			newClass: 'infoButton',
+			text: 'More Info',
+		});
+	};
 
-    const closeForm = ()=>{
-        setOpenForm(null)
-        setBackground(false)
-        setButtonStyle({
-            newClass: 'infoButton',
-            text: 'More Info'})
-    }
+	const openContactForm = () => {
+		setOpenForm(<MoreInfoBlock closeForm={closeForm} />);
+		setBackground(<div onClick={closeForm} className='dark-bkg'></div>);
+		setButtonStyle({
+			newClass: 'infoButton--open',
+			text: 'More Info',
+		});
+	};
 
-    const openContactForm = ()=>{
+	///////============ open disclaimer pop up ===============
+	const [disclaimer, setDisclaimer] = useState(null);
 
-        setOpenForm(<MoreInfoBlock closeForm = {closeForm}/>)
-        setBackground(<div onClick = {closeForm} className = 'dark-bkg'></div>)
-        setButtonStyle({
-            newClass: 'infoButton--open',
-            text: 'More Info'})
-    } 
+	const openDisclaimer = () => {
+		setDisclaimer(
+			<DisclaimerForm
+				closeDisclaimer={closeDisclaimer}
+				openBuyForm={openBuyForm}
+			/>
+		);
+	};
 
-    ///////============ open disclaimer pop up ===============
-    const [disclaimer, setDisclaimer] = useState(null);
+	const closeDisclaimer = () => {
+		setDisclaimer(null);
+	};
+	///////============= open buy pop up ============
 
-    const openDisclaimer = ()=>{
-        setDisclaimer(<DisclaimerForm closeDisclaimer = {closeDisclaimer} openBuyForm = {openBuyForm}/>)
-    }
+	const [buyForm, setBuyForm] = useState(null);
 
-    const closeDisclaimer = ()=>{
-        setDisclaimer(null)
-    }
-    ///////============= open buy pop up ============
+	const openBuyForm = () => {
+		setDisclaimer(null);
+		setBuyForm(
+			<BuyWebsiteForm
+				closeBuyForm={closeBuyForm}
+				openQuestionsForm={openQuestionsForm}
+			/>
+		);
+	};
 
-    const [buyForm, setBuyForm] = useState(null);
+	const closeBuyForm = () => {
+		setBuyForm(null);
+	};
 
-    const openBuyForm = ()=>{
-        setDisclaimer(null)
-        setBuyForm(<BuyWebsiteForm closeBuyForm = {closeBuyForm} openQuestionsForm = {openQuestionsForm}/>)
-    }
+	/////============= open questions popup ===========
 
-    const closeBuyForm = ()=> {
-        setBuyForm(null)
-    }
+	const [openQuestions, setOpenQuestions] = useState(null);
 
-    /////============= open questions popup ===========
+	const closeQuestionsForm = () => {
+		setOpenQuestions(null);
+	};
 
-    const [openQuestions, setOpenQuestions] = useState(null);
+	const openQuestionsForm = () => {
+		setOpenQuestions(<QuestionsForm closeBuyForm={closeQuestionsForm} />);
+	};
 
-    const closeQuestionsForm = ()=> {
-        setOpenQuestions(null)
-    }
+	return (
+		<div>
+			{buyForm}
+			{backgroundAbt}
+			{openFormAbt}
+			{openQuestions}
+			{disclaimer}
+			<div className='left-greeting left-greeting-store'>
+				READY. SET. WWW!
+			</div>
+			<div className='pay-with-paypal'>Pay securely with paypal</div>
+			<div className='pay-with-paypal pay-with-paypal-img'></div>
+			<StoreCarrousel openDisclaimer={openDisclaimer} />
+			<MainButton
+				text={buttonStyleAbt.text}
+				nameOfClass={buttonStyleAbt.newClass}
+				cta={openContactForm}
+			/>
+		</div>
+	);
+};
 
-    const openQuestionsForm = ()=>{
-        setOpenQuestions(<QuestionsForm closeBuyForm ={closeQuestionsForm} />)
-    }
-
-    return (
-        <div>
-            {buyForm}
-            {backgroundAbt}
-            {openFormAbt}
-            {openQuestions}
-            {disclaimer}
-            <div className = "left-greeting left-greeting-store">READY. SET. WWW!</div>
-            <div className = 'pay-with-paypal'>Pay securely with paypal</div>
-            <div className = 'pay-with-paypal pay-with-paypal-img'></div>
-            <StoreCarrousel openDisclaimer = {openDisclaimer} />
-            <MainButton text = {buttonStyleAbt.text} nameOfClass = {buttonStyleAbt.newClass} cta = {openContactForm}/>
-        </div>
-    )
-}
-
-export default Store
+export default Store;

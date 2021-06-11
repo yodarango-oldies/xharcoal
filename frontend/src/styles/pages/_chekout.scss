@@ -1,26 +1,26 @@
-.checkout-button-wrapper_img{
-    width: 100%;
-    height: 20rem;
-    background-image: url('../../images/shoping-bag.png');
-    background-size: 90%;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    margin: 2rem auto;
+.checkout-button-wrapper_img {
+	width: 100%;
+	height: 20rem;
+	background-image: url('../../images/shoping-bag.png');
+	background-size: 90%;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: block;
+	margin: 2rem auto;
 
-    @media (min-width: 500px ) {
-        background-size: 65%;
-    }
+	@media (min-width: 500px) {
+		background-size: 65%;
+	}
 }
 
-.checkout-button-wrapper_img--confirmation{
-    background-image: url('../../images/Shipping-box.svg');
+.checkout-button-wrapper_img--confirmation {
+	background-image: url('../../images/Shipping-box.svg');
 }
-.checkout-button-wrapper{
-    width: 90%;
-    max-width: 500px;
-    margin: 5rem auto;
+.checkout-button-wrapper {
+	width: 90%;
+	max-width: 500px;
+	margin: 5rem auto;
 }
-.std-p--light{
-    color: $widget-color;
+.std-p--light {
+	color: $widget-color;
 }
